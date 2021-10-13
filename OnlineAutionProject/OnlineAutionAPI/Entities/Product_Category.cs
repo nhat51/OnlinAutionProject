@@ -7,5 +7,8 @@ namespace OnlineAutionAPI.Entities
 {
     public class Product_Category
     {
+        public int ID { get; set; }
+        public string Category { get; set;
+        }
     }
 }
