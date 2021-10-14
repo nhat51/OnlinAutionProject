@@ -9,10 +9,12 @@ $('.clock').each(function() {
             format = '%-w week%!w ' + format;
         }
         $(this).html(event.strftime(format));
-    })
-        .on('finish.countdown', function(event) {
+
+        $(this).on('finish.countdown', function(event) {
             $(this).html('This offer has expired!')
                 .parent().addClass('disabled');
         });
-});
+    })
 
+
+});
