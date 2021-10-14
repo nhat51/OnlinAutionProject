@@ -453,8 +453,8 @@ $(function() {
 				+ '<div class="time-item time-min"><div class="num-time">%M</div><div class="name-time">Min </div></div>'
 				+ '<div class="time-item time-sec"><div class="num-time">%S</div><div class="name-time">Sec </div></div>'));
 			$(this).on('finish.countdown', function(event) {
-				$(this).html('This auction has expired!')
-					.parent().addClass('disabled');
+				$(this).html('This auction has ended!')
+					.parent().addClass('price-new');
 			});
 		});
 	})

@@ -5572,7 +5572,7 @@ span.fa-stack {
     width: 100%; }
     .products-list.grid .product-layout .product-item-container .right-block .cartinfo--static .addToCart, .products-list .product-grid .product-item-container .right-block .cartinfo--static .addToCart, .products-list.grid .product-layout .product-item-container .right-block .button-group .addToCart, .products-list .product-grid .product-item-container .right-block .button-group .addToCart {
       position: relative;
-      top: -2px;
+      top: -20px;
       margin: 0 1px;
       -webkit-transform: translateY(-45px);
       -moz-transform: translateY(-45px);
