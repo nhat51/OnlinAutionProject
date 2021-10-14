@@ -444,14 +444,23 @@ $(document).ready(function(){
 });
 
 $(function() {
-	var austDay = new Date(2019, 3 - 1, 28);
-	$('.defaultCountdown-30').countdown(austDay, function(event) {
-		var $this = $(this).html(event.strftime(''
-		   + '<div class="time-item time-day"><div class="num-time">%D</div><div class="name-time">Day </div></div>'
-		   + '<div class="time-item time-hour"><div class="num-time">%H</div><div class="name-time">Hour </div></div>'
-		   + '<div class="time-item time-min"><div class="num-time">%M</div><div class="name-time">Min </div></div>'
-		   + '<div class="time-item time-sec"><div class="num-time">%S</div><div class="name-time">Sec </div></div>'));
-	});
+	$('.clock').each(function (){
+		var $this = $(this), finalDate = $(this).data('countdown');
+		$this.countdown(finalDate, function(event) {
+			$(this).html(event.strftime(''
+				+ '<div class="time-item time-day"><div class="num-time">%D</div><div class="name-time">Day </div></div>'
+				+ '<div class="time-item time-hour"><div class="num-time">%H</div><div class="name-time">Hour </div></div>'
+				+ '<div class="time-item time-min"><div class="num-time">%M</div><div class="name-time">Min </div></div>'
+				+ '<div class="time-item time-sec"><div class="num-time">%S</div><div class="name-time">Sec </div></div>'));
+			$(this).on('finish.countdown', function(event) {
+				$(this).html('This auction has expired!')
+					.parent().addClass('disabled');
+			});
+		});
+	})
+
+
+
 
 });
 
