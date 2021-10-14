@@ -11,7 +11,7 @@ $('.clock').each(function() {
         $(this).html(event.strftime(format));
 
         $(this).on('finish.countdown', function(event) {
-            $(this).html('This offer has expired!')
+            $(this).html('This auction has expired!')
                 .parent().addClass('disabled');
         });
     })
