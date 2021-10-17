@@ -17,6 +17,5 @@ namespace OnlineAutionAPI.Entities
         public int Product_Category_ID { get; set; }
         public string Product_Description { get; set; }
         public int Actual_cost_in_curency { get; set; }
-
     }
 }
