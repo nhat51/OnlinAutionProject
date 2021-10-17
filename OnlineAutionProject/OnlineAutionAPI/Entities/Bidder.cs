@@ -20,6 +20,7 @@ namespace OnlineAutionAPI.Entities
         public DateTime JoinDate { get; set; }
         public int Current_bid_coins { get; set; }
         public int Locked_bid_coins { get; set; }
+        public List<Bid_order> Bid_Orders { get; set; }
 
     }
 }

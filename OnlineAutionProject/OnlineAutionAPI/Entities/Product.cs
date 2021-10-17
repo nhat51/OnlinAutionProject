@@ -12,10 +12,8 @@ namespace OnlineAutionAPI.Entities
         [Key]
         public int ID { get; set; }
         public string Product_Name { get; set; }
-
-        [ForeignKey("Product_Category")]
-        public int Product_Category_ID { get; set; }
         public string Product_Description { get; set; }
         public int Actual_cost_in_curency { get; set; }
+        public Product_Category Category { get; set; }
     }
 }

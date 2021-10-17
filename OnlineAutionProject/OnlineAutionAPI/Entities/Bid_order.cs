@@ -15,5 +15,7 @@ namespace OnlineAutionAPI.Entities
         public int Base_Price { get; set; }
         public int Increment_Price_Per_Bid { get; set; }
         public int Cool_Down_Time_Per_Bid { get; set; }
+        public Bidder Bidder { get; set; }
+
     }
 }

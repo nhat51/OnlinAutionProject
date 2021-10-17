@@ -14,6 +14,6 @@ namespace OnlineAutionAPI.Entities
         [ForeignKey("Bidder_bid_regist")]
         public int Bidder_Bid_Regist_ID { get; set; }
         
-
+     
     }
 }
