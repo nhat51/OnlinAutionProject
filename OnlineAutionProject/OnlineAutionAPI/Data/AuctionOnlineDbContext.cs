@@ -26,6 +26,7 @@ namespace OnlineAutionAPI.Data
         public DbSet<Bid_order_log> Bid_Order_Logs { get; set; }
         public DbSet<Bid_coin_pack> Bid_Coin_Packs { get; set; }
         public DbSet<Bid_coin_trans_log> Bid_Coin_Trans_Logs { get; set; }
+        public DbSet<OnlineAutionAPI.Entities.Sub_category> Sub_category { get; set; }
     }
 
 }
