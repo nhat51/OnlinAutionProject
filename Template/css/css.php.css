@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/*******************************************
+ *	Theme Name: SuperMaket
+ *	Author: Magentech
+ *	Author URI: http://www.magentech.com
+ *	Version: 1.0.0
+ *	Description: This is html5 Sass template
+ *******************************************/
+/* [2] */
+/* [8] */
+/*===============================================
+ [SASS DIRECTORY ]
+ [1] Minxin Link
+ [2] Minxin Button
+ [3] Minxin Triangle
+ [4] Minxin LABEL PRODUCT
+ [5] Minxin Scrollbars
+ [6] Minxin Dev Custom
+ ==============================================*/
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;text-decoration:none}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}
+select,input,button,textarea,button{font:99% arial,helvetica,clean,sans-serif;}
+table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+body
+{
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    font-size: 14px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: rgb(55, 71, 79);
+    background-color: rgb(236, 236, 236);
+    word-wrap: break-word;
+    line-height: 1.28;
+    min-width: 300px;
+
+}
+
+/* counteract the word-wrap setting in 'body' */
+pre, textarea
+{
+    word-wrap: normal;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+select, input, button, textarea, button {
+    font: 99% arial,helvetica,clean,sans-serif;
+}
+
+input[type=search],
+input[type=text] {
+    -webkit-appearance: none;
+}
+/** *********************** **/
+/** TEXT INPUTS             **/
+/** *********************** **/
+.textCtrl
+{
+    font-size: 14px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: rgb(84, 110, 122);
+    background-color: transparent;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    border: 0 solid rgb(224, 224, 224);
+    border-bottom-width: 1px;
+    border-radius: 0;
+    outline: 0;
+    box-sizing: border-box;
+    min-height: 36px;
+
+}
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    color: -internal-light-dark(black, white) !important;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+label {
+    cursor: default;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    vertical-align: sub;
+    position: relative;
+    padding: 0 !important;
+    border: none;
+}
+
+textarea.textCtrl.Elastic
+{
+    /* use for jQuery.elastic */
+    max-height: 300px;
+}
+textarea.textCtrl
+{
+    word-wrap: break-word;
+    resize: vertical;
+}
+.button.primary
+{
+    color: #FFF;
+    background-color: rgb(33, 150, 243);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+
+}
