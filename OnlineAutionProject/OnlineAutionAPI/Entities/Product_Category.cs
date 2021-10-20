@@ -12,7 +12,7 @@ namespace OnlineAutionAPI.Entities
         public int ID { get; set; }
         public string Category { get; set; }
         public string Cat_Image { get; set; }
-        public List<Product> Products { get; set; }
+        public List<Sub_category> Sub_Categories { get; set; }
 
     }
 }

@@ -192,6 +192,8 @@ namespace OnlineAutionAPI.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("Bidder_ID");
+
                     b.ToTable("Bidder_Bid_Regists");
                 });
 
@@ -205,10 +207,15 @@ namespace OnlineAutionAPI.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ProductID")
+                        .HasColumnType("int");
+
                     b.Property<int>("Product_ID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ProductID");
 
                     b.ToTable("Prodcut_Images");
                 });
@@ -223,18 +230,18 @@ namespace OnlineAutionAPI.Migrations
                     b.Property<int>("Actual_cost_in_curency")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoryID")
-                        .HasColumnType("int");
-
                     b.Property<string>("Product_Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Product_Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("Sub_CategoryID")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
 
-                    b.HasIndex("CategoryID");
+                    b.HasIndex("Sub_CategoryID");
 
                     b.ToTable("Products");
                 });
@@ -257,6 +264,26 @@ namespace OnlineAutionAPI.Migrations
                     b.ToTable("Product_Categories");
                 });
 
+            modelBuilder.Entity("OnlineAutionAPI.Entities.Sub_category", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Sub_Category_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Sub_category");
+                });
+
             modelBuilder.Entity("OnlineAutionAPI.Entities.Bid_order", b =>
                 {
                     b.HasOne("OnlineAutionAPI.Entities.Bidder", "Bidder")
@@ -266,10 +293,37 @@ namespace OnlineAutionAPI.Migrations
                     b.Navigation("Bidder");
                 });
 
+            modelBuilder.Entity("OnlineAutionAPI.Entities.Bidder_bid_regist", b =>
+                {
+                    b.HasOne("OnlineAutionAPI.Entities.Bidder", "Bidder")
+                        .WithMany("Bidder_Bid_Regists")
+                        .HasForeignKey("Bidder_ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bidder");
+                });
+
+            modelBuilder.Entity("OnlineAutionAPI.Entities.Prodcut_Image", b =>
+                {
+                    b.HasOne("OnlineAutionAPI.Entities.Product", null)
+                        .WithMany("Prodcut_Images")
+                        .HasForeignKey("ProductID");
+                });
+
             modelBuilder.Entity("OnlineAutionAPI.Entities.Product", b =>
                 {
-                    b.HasOne("OnlineAutionAPI.Entities.Product_Category", "Category")
+                    b.HasOne("OnlineAutionAPI.Entities.Sub_category", "Sub_Category")
                         .WithMany("Products")
+                        .HasForeignKey("Sub_CategoryID");
+
+                    b.Navigation("Sub_Category");
+                });
+
+            modelBuilder.Entity("OnlineAutionAPI.Entities.Sub_category", b =>
+                {
+                    b.HasOne("OnlineAutionAPI.Entities.Product_Category", "Category")
+                        .WithMany("Sub_Categories")
                         .HasForeignKey("CategoryID");
 
                     b.Navigation("Category");
@@ -278,9 +332,21 @@ namespace OnlineAutionAPI.Migrations
             modelBuilder.Entity("OnlineAutionAPI.Entities.Bidder", b =>
                 {
                     b.Navigation("Bid_Orders");
+
+                    b.Navigation("Bidder_Bid_Regists");
+                });
+
+            modelBuilder.Entity("OnlineAutionAPI.Entities.Product", b =>
+                {
+                    b.Navigation("Prodcut_Images");
                 });
 
             modelBuilder.Entity("OnlineAutionAPI.Entities.Product_Category", b =>
+                {
+                    b.Navigation("Sub_Categories");
+                });
+
+            modelBuilder.Entity("OnlineAutionAPI.Entities.Sub_category", b =>
                 {
                     b.Navigation("Products");
                 });

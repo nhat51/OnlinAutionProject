@@ -16,5 +16,7 @@ namespace OnlineAutionAPI.Entities
         public int MyProperty { get; set; }
         public DateTime Regist_Date { get; set; }
         public bool IsActive { get; set; }
+        public Bidder Bidder { get; set; }
+
     }
 }
