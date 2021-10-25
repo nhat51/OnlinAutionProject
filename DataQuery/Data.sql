@@ -52,7 +52,7 @@ INSERT INTO Sub_category VALUES
 ('Coin',6)
 SELECT * FROM Sub_category
 GO
-DELETE FROM Sub_category
+
 INSERT INTO Products VALUES 
 --Oil Painting--
 ('Mona Lisa','Mona Lisa is one of the most famous oil paintings in the world. A 16th-century portrait painted in oil on a poplar panel in Florence by Leonardo da Vinci during the Italian Renaissance. The work is owned by the French Government and is currently on display at the Louvre in Paris, France as Portrait of Lisa Gherardini, wife of Francesco del Giocondo',15000,1),
@@ -61,4 +61,5 @@ INSERT INTO Products VALUES
 ('The Cafe Terrace on the Place de Forum','This is the first oil painting Van Gogh painted the starry sky as the background. One year after painting Cafe Terrace, Van Gogh continued painting Starry Night. In a letter to his brother Theo, Van Gogh reminded of the Cafe Terrace that he painted "the scene of the cafe on the sidewalk of the Forum Hotel, where we used to go" and "painted at night".', ,1),
 ('The Birth of Venus','Botticellis oil painting The Birth of Venus is the first full-length, non-religious nude image since antiquity. The painting was painted for Lorenzo de Medici. Venus appeared on the seashore in a giant seashell next to the wind god Zephyrus and Aura as a sign of the arrival of spring in this land.',12000 ,1),
 ('Les Demoiselles d’Avignon','Les Demoiselles d’Avignon became an iconic oil painting of the 20th century, breaking with tradition commonly found in Western painting, incorporating the African masks Picasso saw at the ethnomuseum. study in Paris. The women depicted in the painting are actually prostitutes in the brothel in Barcelona, the artist’s hometown.',60000,1),
-(' The Kiss','The painting The Kiss marks Gustav Klimt’s heyday from 1899-1919 when he often used gold leaf - a technique inspired by a 1903 trip to the Basilica di San Vitale in Ravenna, Italy, where he saw the famous Byzantine mosaics of the church.',70000,1),
+('The Kiss','The painting The Kiss marks Gustav Klimt’s heyday from 1899-1919 when he often used gold leaf - a technique inspired by a 1903 trip to the Basilica di San Vitale in Ravenna, Italy, where he saw the famous Byzantine mosaics of the church.',70000,1),
+('The Scream','The Scream is the name of one of four compositions, in the form of paintings and prints on stone, by Norwegian painter Edvard Munch between 1893 and 1910. All paintings depict a European character. despairingly contrasts with the landscape mixed with the red sky.',30000,3),
