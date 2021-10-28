@@ -441,19 +441,19 @@
                                 <div class="col-sm-6">
                                     <div class="form-group ">
                                         <label class="control-label" for="firstname">First Name</label>
-                                        <input class="form-control" id="firstname" value="Nguyen" readonly onchange="Input()"/>
+                                        <input class="form-control nhatclass" id="firstname" value="Nguyen" readonly />
                                     </div>
                                     <div class="form-group ">
                                         <label class="control-label" for="lastname">Last Name</label>
-                                        <input class="form-control" id="lastname" value="Huong" readonly />
+                                        <input class="form-control nhatclass" id="lastname" value="Huong" readonly />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="telephone">Telephone</label>
-                                        <input class="form-control" id="telephone" value="01234567" readonly>
+                                        <input class="form-control nhatclass" id="telephone" value="01234567" readonly>
                                     </div>
                                     <div class="form-group ">
                                         <label class="control-label" for="email">E-mail</label>
-                                        <input class="form-control" id="email" value="huongnguyen@gmail.com" readonly/>
+                                        <input class="form-control nhatclass" id="email" value="huongnguyen@gmail.com" readonly/>
                                     </div>
                                 </div>
 								<div class="col-sm-6">
@@ -475,8 +475,7 @@
                                 </div>
                                 </div>
 							</fieldset>
-                            <button id="changeButton" type="button" onclick="Input()">Change Profile</button>
-                            <button id="saveButton" type="submit" hidden>Save</button>
+                            <button id="changeButton" type="button" onclick="Input()" >Change Profile</button>
 						</div>
 					</div>
 
@@ -484,21 +483,19 @@
 			</div>
 			<!--Middle Part End-->
 			<!--Right Part Start -->
-			<aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
-				<h2 class="subtitle">Account</h2>
-				<div class="list-group">
-					<ul class="list-item">
-						<li><a href="wallet.html">Wallet</a>
-						</li>
-						<li><a href="#">Bid History</a>
-						</li>
-						<li><a href="#">Reward Points</a>
-						</li>
+            <aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
+                <h2 class="subtitle">Account</h2>
+                <div class="list-group">
+                    <ul class="list-item">
+                        <li><a href="my-account.html">Profile</a></li>
+                        <li><a href="wallet.html">Wallet</a>
+                        </li>
+                        <li><a href="bidhistory.html">Bid History</a>
+                        </li>
                         <li><a href="">Change password</a></li>
-
-					</ul>
-				</div>
-			</aside>
+                    </ul>
+                </div>
+            </aside>
 			<!--Right Part End -->
 		</div>
 	</div>

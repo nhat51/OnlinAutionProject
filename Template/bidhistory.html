@@ -430,7 +430,7 @@
                     <div class="tabsslider  vertical-tabs col-xs-12">
                         <ul class="nav nav-tabs col-lg-2 col-sm-3">
                             <li class="active"><a data-toggle="tab" href="#tab-1">Your Product</a></li>
-                            <li class="item_nonactive"><a data-toggle="tab" href="#tab-5">Auction Won</a></li>
+                            <li class="item_nonactive"><a data-toggle="tab" href="#tab-5">Auction History</a></li>
                         </ul>
                         <div class="tab-content col-lg-10 col-sm-9 col-xs-12">
                             <div id="tab-1" class="tab-pane fade active in">
@@ -454,7 +454,7 @@
                                         <td class="text-center">
                                             2021/12/14
                                         </td>
-                                        <td>In Auction</td>
+                                        <td class="text-center">In Auction</td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">product 2</td>
@@ -464,7 +464,7 @@
                                         <td class="text-center">
                                             2021/10/14
                                         </td>
-                                        <td>Ended</td>
+                                        <td class="text-center">Ended</td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">product 3</td>
@@ -474,25 +474,37 @@
                                         <td class="text-center">
                                             2021/12/14
                                         </td>
-                                        <td>Waiting</td>
+                                        <td class="text-center">Waiting</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <div id="tab-5" class="tab-pane fade">
                                 <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td class="text-center">Name</td>
+                                            <td class="text-center">Image</td>
+                                            <td class="text-center">Your Bid</td>
+                                            <td class="text-center">Status</td>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                     <tr>
                                         <td class="text-center">
-                                            Seller 1
+                                            Product Name 1
                                         </td>
+                                        <td class="text-center">Product Image</td>
                                         <td class="text-center">$500</td>
+                                        <td class="text-center"><div class="alert-info">Won</div></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">
-                                            Seller 2
+                                            Product Name 2
                                         </td>
-                                        <td class="text-center">$450</td>
+                                        <td class="text-center">Product Image</td>
+                                        <td class="text-center">$500</td>
+                                        <td class="text-center"><div class="alert-danger">Lose</div></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -507,14 +519,12 @@
                 <h2 class="subtitle">Account</h2>
                 <div class="list-group">
                     <ul class="list-item">
+                        <li><a href="my-account.html">Profile</a></li>
                         <li><a href="wallet.html">Wallet</a>
                         </li>
                         <li><a href="bidhistory.html">Bid History</a>
                         </li>
-                        <li><a href="#">Reward Points</a>
-                        </li>
-                        <li><a href="">Change password</a></li>
-
+                        <li><a href="changepassword.html">Change password</a></li>
                     </ul>
                 </div>
             </aside>
@@ -569,7 +579,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-infos">
                         <div class="infos-footer">
-                            <a href="#"><img src="image/catalog/logo-footer.png" alt="image"></a>
+                            <a href="#"><img src="image/catalog/logo2.png" alt="image"></a>
                             <ul class="menu">
                                 <li class="adres">
                                     San Luis potosí, centro historico, 78000 san luis potosí, SPL, Mexico
@@ -585,8 +595,6 @@
                                 </li>
                             </ul>
                         </div>
-
-
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-style">
                         <div class="box-information box-footer">
@@ -606,7 +614,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-style col-clear2">
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-sty    le col-clear2">
                         <div class="box-account box-footer">
                             <div class="module clearfix">
                                 <h3 class="modtitle">My Account</h3>

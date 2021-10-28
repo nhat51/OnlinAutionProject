@@ -180,19 +180,21 @@ namespace OnlineAuctionMVC.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("Bid_Order_IDID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("Bidder_IDID")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Regist_Date")
                         .HasColumnType("datetime2");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("Bid_Order_IDID");
 
                     b.HasIndex("Bidder_IDID");
 
@@ -303,9 +305,15 @@ namespace OnlineAuctionMVC.Migrations
 
             modelBuilder.Entity("OnlineAuctionMVC.Models.Bidder_bid_regist", b =>
                 {
+                    b.HasOne("OnlineAuctionMVC.Models.Bid_order", "Bid_Order_ID")
+                        .WithMany()
+                        .HasForeignKey("Bid_Order_IDID");
+
                     b.HasOne("OnlineAuctionMVC.Models.Bidder", "Bidder_ID")
                         .WithMany("Bidder_Bid_Regists")
                         .HasForeignKey("Bidder_IDID");
+
+                    b.Navigation("Bid_Order_ID");
 
                     b.Navigation("Bidder_ID");
                 });

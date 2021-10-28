@@ -9,7 +9,7 @@ namespace OnlineAuctionMVC.Models
     {
         public int ID { get; set; }
         public Bidder Bidder_ID { get; set; }
-        public int MyProperty { get; set; }
+        public Bid_order Bid_Order_ID { get; set; }
         public DateTime Regist_Date { get; set; }
         public bool IsActive { get; set; }
     }
