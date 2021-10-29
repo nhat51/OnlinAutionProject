@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<OnlineAuctionMVC.Models.Product_category>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -60,75 +61,18 @@
                  data-items_column0="5" data-items_column1="4" data-items_column2="3" data-items_column3="2"
                  data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes"
                  data-loop="no" data-hoverpause="yes">
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Electronics">
-                            <img src="image/catalog/demo/category/cate1.jpg" alt="img">
-                        </a>
+                @foreach (var item in Model)
+                {
+                    <div class="content-box">
+                        <div class="image-cat">
+                            <a href="category.html" title="Electronics">
+                                <img src="image/Category/@item.Cat_Image" alt="img" width="265px">
+                            </a>
+                        </div>
+                        <div class="cat-title"><a href="category.html">@item.Category</a></div>
                     </div>
-                    <div class="cat-title">
-                        <a href="category.html" title="Electronics">
-                            Electronics
-                        </a>
-                    </div>
-                </div>
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Iwatch & Accessories">
-                            <img src="image/catalog/demo/category/cate2.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="cat-title">
-                        <a href="category.html"
-                           title="Iwatch & Accessories">Electronics</a>
-                    </div>
-                </div>
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Furnicoms">
-                            <img src="image/catalog/demo/category/cate3.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="cat-title"><a href="category.html" title="Furnicoms">Furnicoms</a></div>
-                </div>
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Fashion">
-                            <img src="image/catalog/demo/category/cate4.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="cat-title"><a href="category.html" title="Fashion">Fashion</a></div>
-                </div>
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Health & Beauty">
-                            <img src="image/catalog/demo/category/cate5.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="cat-title">
-                        <a href="category.html" title="Health & Beauty">
-                            Health &
-                            Beauty
-                        </a>
-                    </div>
-                </div>
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Electronics">
-                            <img src="image/catalog/demo/category/cate1.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="cat-title"><a href="category.html" title="Electronics">Electronics</a></div>
-                </div>
-                <div class="content-box">
-                    <div class="image-cat">
-                        <a href="category.html" title="Watches">
-                            <img src="image/catalog/demo/category/cate3.jpg" alt="img">
-                        </a>
-                    </div>
-                    <div class="cat-title"><a href="category.html" title="Watches">Watches</a></div>
-                </div>
-            </div>
+                  }
+             </div>
         </div>
     </div>
     <div id="so_category_slider_188" class="so-category-slider container-slider module cate-slider1">
