@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +44,6 @@
     <link href="css/header/header2.css" rel="stylesheet">
     <link id="color_scheme" href="css/home2.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/css.php.css" rel="stylesheet">
 
     <!-- Google web fonts
    ============================================ -->
@@ -55,653 +53,6 @@
     </style>
 
 </head>
-<style>@charset "UTF-8";
-
-
-.GlobalCreator_ThreadForm {
-    width: 450px;
-    margin: 0 auto;
-}
-.GlobalCreator_ThreadForm .TextField,
-.TC_inputPrice {
-    height: 44px;
-    border: 1px solid rgb(0, 0, 0); border: 1px solid rgba(0, 0, 0, 0.38); _border: 1px solid rgb(0, 0, 0);
-    border-radius: 4px;
-    width: 100%;
-    font-size: 16px;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.6);
-}
-.GlobalCreator_ThreadForm .TextField::placeholder,
-.TC_inputPrice::placeholder {
-    color: rgba(0, 0, 0, 0.6);
-}
-.GlobalCreator_ThreadForm .productTitleExample {
-    height: 16px;
-    font-size: 14px;
-    color: #484848;
-    margin-top: 10px;
-    margin-bottom: 24px;
-}
-
-.UploadButton .fa {
-    font-size: 27px;
-}
-.UploadButton {
-    height: 44px;
-    border-radius: 4px;
-    background-color: #dd512a;
-    display: flex;
-    align-items: center;
-    padding: 9px 20px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-}
-
-.UploadButton>span {
-    padding: 0;
-    color: #fff;
-    margin-left: 6px;
-    text-transform: initial;
-    font-size: 18px;
-    font-weight: 500;
-}
-.threadview-header--image.threadview-header--imageDefault {
-    flex-direction: row;
-    height: 435px;
-    min-width: 563px;
-}
-
-.UploadButtonText {
-    margin-top: 10px;
-    text-align: center;
-}
-.UploadButtonText>p:first-child {
-    font-size: 14px;
-    line-height: 1.64;
-    color: #242424;
-}
-.GlobalCreator_ThreadForm .helpText {
-    color: #767676;
-    font-size: 14px;
-    line-height: 1.64;
-}
-
-.GlobalCreator_ThreadFormHeading {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.17;
-    color: #484848;
-    margin-bottom: 30px;
-}
-.threadview-header--title {
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 1.36;
-    color: #242424;
-    margin-bottom:10px;
-    word-break: break-all;
-
-}
-.UploadGuideText {
-    font-size: 14px;
-    color: #484848;
-    margin-top: 20px;
-}
-.UploadGuideText:before {
-    content:'';
-    width: 6px;
-    height: 6px;
-    background-color: #dd512a;
-    border-radius: 3px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-.GlobalCreator_ThreadFormSep {
-    height: 1px;
-    opacity: 0.2 !important;
-    background-color: #979797;
-    width: 100%;
-    margin: 24px 0;
-}
-.TTC_currencyText {
-    display: none;
-}
-.PriceText {
-    font-size: 14px;
-    color: #484848;
-    margin-top:10px;
-}
-.PriceTextHolder {
-    margin-left: 6px;
-    font-weight: 500;
-}
-.TextField.Elastic {
-    min-height: 120px;
-    resize: none;
-}
-#ctrl_description_hider,
-#ctrl_guarantee_date_picker {
-    visibility:hidden;
-    margin-top: 10px;
-}
-#ctrl_description_hider.is-visible,
-#ctrl_guarantee_date_picker.is-visible {
-    visibility: visible;
-}
-#ctrl_classified_colorCustomInput {
-    background-color: #fff;
-    font-style: inherit;
-}
-.GlobalCreator_ThreadForm .GlobalCreator_ThreadFormNext {
-    height: 44px;
-    border-radius: 4px;
-    background-color: #dd512a;
-    box-sizing: border-box;
-    color: #fff;
-    text-transform: initial;
-}
-.GlobalCreator_ThreadForm .GlobalCreator_ThreadFormNext:active,
-.GlobalCreator_ThreadForm .GlobalCreator_ThreadFormNext:hover,
-.GlobalCreator_ThreadForm .GlobalCreator_ThreadFormNext:focus {
-    background-color: #dd512a;
-    color: #fff;
-}
-.GlobalCreator_ThreadFormStatusText {
-    font-size: 18px;
-    color: #767676;
-}
-.GlobalCreator_ThreadFormStatuses li>label {
-    padding: 16px 0;
-    display: inline-flex;
-    align-items: center;
-}
-.GlobalCreator_ThreadFormStatuses li>label>input:before,
-.GlobalCreator_ThreadFormStatuses li>label>input:after {
-    width: 20px;
-    height:20px;
-}
-.GlobalCreator_ThreadFormStatuses li>label>input {
-    margin-right: 12px;
-}
-.GlobalCreator_ThreadFormStatuses li>label>input:before {
-    background-color: #dd512a;
-}
-.GlobalCreator_ThreadFormStatuses li>label>input:checked:after {
-    border-color: #dd512a;
-}
-.GlobalCreator_ThreadFormStatuses li>label>input:after {
-    border-color: #b6b6b6;
-}
-.GlobalCreator_ThreadFormNodeAuto>li:not(:last-child) {
-    margin-bottom: 6px;
-}
-.GlobalCreator_ThreadFormFooterInner {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.GlobalCreator_ThreadForm .GlobalCreator_ThreadFormBack {
-    font-size: 16px;
-    letter-spacing: 0.15px;
-    color: #555555;
-    font-weight: normal;
-    text-transform: initial;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.NhattaoMods_UploadZonePreviewItem {
-    flex: 0 0 33.3333%;
-    min-width: 33.3333%;
-    position: relative;
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: center;
-}
-.UploadZonePreviewImg {
-    width: 128px;
-    height: 128px;
-    border-radius: 4px;
-    background-position: center;
-    background-size: cover;
-    display: block;
-    position: relative;
-}
-.UploadZoneDeleter {
-    text-align: center;
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    background-color: #8f8f8f;
-    box-sizing: border-box;
-    border-radius: 13px;
-    top: -13px;
-    right: -13px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.UploadZoneDeleter .fa {
-    font-size: 19px;
-    color: #fff;
-}
-.UploadZonePreviewText {
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 14px;
-    text-align: center;
-    color: #242424;
-    display: block;
-}
-.UploadZone.dz-started {
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.UploadZone.dz-started UploadZoneOverlay {
-    display: none;
-}
-.UploadZoneHolder {
-    width: 99px;
-    height: 99px;
-    padding: 5px;
-}
-.UploadZoneHolder>span {
-    border-radius: 4px;
-    background-color: #fcfcfc;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.UploadZone {
-    display: flex;
-    width: 450px;
-    min-height: 333px;
-    border-radius: 8px;
-    border: dashed 2px #b6b6b6;
-    position: relative;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-    box-sizing: border-box;
-}
-.UploadZone.is-dragover {
-    border-color: #dd512a;
-}
-.UploadZone.is-dragover .UploadZoneOverlay {
-    opacity: 0.4;
-}
-.UploadZoneOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-.GlobalCreator_ThreadForm .button.primary {
-    box-shadow: none;
-    border-radius: 4px;
-    background-color: #dd512a;
-    text-transform: initial;
-    height: 44px;
-    min-width:120px;
-    box-sizing: border-box;
-}
-.GlobalCreator_ThreadForm .button.primary:hover,
-.GlobalCreator_ThreadForm .button.primary:focus,
-.GlobalCreator_ThreadForm .button.primary:active {
-    background-color: #dd512a;
-    color: #fff;
-}
-.UploadButtonInput {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-.UploadZonePreviewItem.addImage {
-    flex-direction: column;
-    height: 138px;
-    display: flex;
-    align-items: center;
-}
-.UploadZonePreviewItem .UploadButton {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border-radius: 5.8px;
-    border: dashed 1.1px #979797;
-    background-color: #f8f8f8;
-    width: 128px;
-}
-.UploadZonePreviewItem.addImage span{
-    color:#242424;
-    font-size: 18px;
-    margin-left: 0;
-    font-weight: normal;
-    margin-top: 8px;
-}
-.UploadZonePreviewItem.addImage .fa {
-    color: #d4d4d4;
-    font-size: 40px;
-}
-.UploadZone .UploadZonePreviewItem.addImage {
-    display: none;
-}
-.UploadZone.dz-started .UploadZonePreviewItem.addImage {
-    display: flex;
-}
-.classifiedFieldColor>li>label {
-    display: flex;
-}
-.classifiedFieldColor .classifiedFieldColorText {
-    flex: 1;
-    margin-right: 12px;
-}
-.classifiedFieldColor .classifiedFieldColorExample {
-    width: 28px;
-    height: 28px;
-    border-radius: 14px;
-    border: 2px solid #fff;
-    box-sizing: border-box;
-    box-shadow: 0 0 0 1px rgba(210,210,210,0.50);
-}
-.classifiedFieldColor>li:last-child .classifiedFieldColorExample {
-    background-image: conic-gradient(#ff3636, #ffe43f 25%, #37ff69 50%, #3e9dff 71%, #ff00c1, #ff3636);
-}
-.GlobalCreator_OverlayOpen .GlobalCreator_ThreadForm {
-    position: initial !important;
-    margin-top: 124px !important;
-}
-.GlobalCreator_ThreadFormHeader {
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-}
-.threadFormHeaderContent {
-    max-width: 1200px;
-    margin:0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.threadFormHeaderContent>a {
-    margin: 17px 0;
-    display: inline-block;
-}
-.threadFormHeaderContent .CancelThreadConfirm {
-    display: flex;
-    align-items:center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #dd512a;
-    cursor: pointer;
-}
-.threadFormHeaderContent .CancelThreadConfirm img {
-    margin-left: 15px;
-}
-.GlobalCreator_ProgressBar {
-    height: 10px;
-    background-color: #d8d8d8;
-}
-.GlobalCreator_ProgressBarTrack {
-    height: 100%;
-    border-top-right-radius: 5px;
-    background-color: #dd512a;
-    border-bottom-right-radius: 5px;
-    transition: width 500ms;
-}
-.GlobalCreator_ThreadForm select {
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-.GlobalCreator_ThreadForm select {
-    background-image:
-            linear-gradient(45deg, transparent 50%, gray 50%),
-            linear-gradient(135deg, gray 50%, transparent 50%),
-            radial-gradient(#fff 70%, transparent 72%);
-    background-position:
-            calc(100% - 20px) calc(1em + 2px),
-            calc(100% - 15px) calc(1em + 2px),
-            calc(100% - .5em) .5em;
-    background-size:
-            5px 5px,
-            5px 5px,
-            1.5em 1.5em;
-    background-repeat: no-repeat;
-}
-
-.GlobalCreator_ThreadForm .FloatInputLabel .fieldLabel,
-.GlobalCreator_ThreadForm .FloatInputLabel.focus .fieldLabel,
-.GlobalCreator_ThreadForm .FloatInputLabel.active .fieldLabel{
-    color: rgba(0,0,0,0.6);
-}
-.GlobalCreator_ThreadForm a.loginOverlayCloser {
-    display: none;
-}
-.GlobalCreator_ThreadForm .guaranteeDateGroup {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-}
-.GlobalCreator_ThreadForm .guaranteeDateGroup .TextField {
-    width: 115px;
-    margin-left: 14px;
-}
-.GlobalCreator_ThreadFormOverlay .GlobalCreator_CloseConfirm {
-    position: absolute;
-    top: -9999px;
-    left: calc((100% - 333px)/2);
-    width: 333px;
-    box-sizing: border-box;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.14);
-    transition: all 500ms;
-}
-.GlobalCreator_ThreadFormOverlay .GlobalCreator_CloseConfirm.is-opening {
-    top: 100px;
-}
-.GlobalCreator_ThreadFormOverlay .ConfirmBackdrop.is-visible {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-}
-.GlobalCreator_CloseConfirm>p {
-    font-size: 14px;
-    line-height: 1.43;
-    letter-spacing: 0.25px;
-    color: rgba(0, 0, 0, 0.6);
-}
-.GlobalCreator_CloseConfirmActions {
-    display: flex;
-    margin-top: 20px;
-    justify-content: flex-end;
-}
-.GlobalCreator_CloseConfirmActions .button {
-    font-weight: normal;
-    color: #555555;
-}
-.GlobalCreator_CloseConfirmActions .actionClose {
-    font-weight: 500;
-    color: #dd512a;
-}
-@media (max-width: 480px) {
-    .Responsive .GlobalCreator_ThreadForm {
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin-top: 90px;
-    }
-    .Responsive .UploadZone {
-        background-color: #f8f8f8;
-        width: 100%;
-        min-height: 114px;
-    }
-    .Responsive .UploadZoneHolder,
-    .Responsive .UploadDragText {
-        display: none;
-    }
-    .Responsive .UploadButton {
-        flex-direction: column;
-        background-color: transparent;
-        padding: 0;
-        height: initial;
-    }
-    .Responsive .UploadButton .fa {
-        color: #d4d4d4;
-        font-size: 42px;
-    }
-    .Responsive .UploadButton>span {
-        font-size: 12px;
-        line-height: 1.33;
-        text-align: center;
-        color: #242424;
-        margin-left: 0;
-        margin-top: 7px;
-    }
-    .Responsive .GlobalCreator_ThreadForm .helpText,
-    .Responsive .PriceText {
-        font-size: 12px;
-    }
-    .Responsive .GlobalCreator_ThreadFormHeading {
-        font-size: 20px;
-    }
-    .Responsive .GlobalCreator_ThreadForm .productTitleExample,
-    .Responsive .UploadGuideText {
-        font-size: 12px;
-        font-weight: 500;
-    }
-    .Responsive .GlobalCreator_ThreadForm .productTitleExample {
-        margin-top: 8px;
-    }
-    .Responsive .UploadGuideText {
-        margin-top: 15px;
-    }
-    .Responsive .GlobalCreator_ThreadFormSep { margin: 22px 0; }
-    .Responsive .GlobalCreator_ProgressBar { height: 4px; }
-    .Responsive .threadFormHeaderContent>a { margin: 8px 8px 8px 13px; }
-    .Responsive .UploadZonePreviewImg {
-        width: 100%;
-        height: 80px;
-        margin: 0 auto;
-    }
-    .Responsive .UploadZonePreviewItem .UploadButton {
-        width: 80px;
-    }
-    .Responsive .UploadZonePreviewItem.addImage {
-        height: 90px;
-    }
-    .Responsive .UploadZone.dz-started {
-        background-color: transparent;
-        padding: 0;
-        border-width: 0;
-    }
-    .Responsive .UploadZoneDeleter {
-        width: 16px;
-        height: 16px;
-        top: -8px;
-        right: -8px;
-    }
-    .Responsive .UploadZoneDeleter .fa {
-        font-size: 10px;
-    }
-    .Responsive .UploadZonePreviewText {
-        font-size: 12px;
-        font-weight: normal;
-        color: #242424;
-        margin-top: 8px;
-    }
-    .Responsive .GlobalCreator_ThreadFormStatuses li>label {
-        padding: 10px 0;
-    }
-    .Responsive .GlobalCreator_ThreadForm a.loginOverlayCloser {
-        top: 14px;
-        right: 16px;
-        display: block;
-    }
-    .Responsive .UploadButtonText { margin-top: 0; }
-    .Responsive .GlobalCreator_ThreadForm .guaranteeDateGroup {
-        justify-content: flex-end;
-    }
-}
-
-.GlobalCreator_ThreadFormFooter.is-sticky {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 0 #e5e5e5;
-    height: 70px;
-    box-sizing: border-box;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-.GlobalCreator_ThreadFormFooter.is-sticky .GlobalCreator_ThreadFormFooterInner {
-    width: 450px;
-    align-items: center;
-}
-.threadEditForm .FormStep1 { display: none; }
-.NFloatInputLabel .formValidationInlineError {
-    width: initial !important;
-}
-.ThreadForm_fieldGuarantee span {
-    margin-left: 15px;
-}
-.helpText.is-unlimited,
-.UploadZonePreviewText.is-unlimited {
-    display: none;
-}
-
-
-@media(max-width: 610px) {
-    .Responsive .registerSpan {
-        text-align: center;
-    }
-    .Responsive .registerSpan>span {
-        display: block;
-        margin-bottom: 10px;
-    }
-    .Responsive .dobField>div {
-        flex: 0 0 100px;
-        width: 100px;
-    }
-    .Responsive #ctrl_pageLogin_remember { margin-right: 10px; }
-    .Responsive .ContentPopup.registerForm,
-    .Responsive .ContentPopup.loginForm {
-        margin-top: 0;
-        height: 100%;
-        min-height: 710px;
-    }
-    .Responsive ContentPopup.loginForm .heading {
-        display: none;
-    }
-}
-</style>
 <body class="common-home res layout-2">
 <div id="wrapper" class="wrapper-fluid banners-effect-7">
     <!-- Header Container  -->
@@ -982,399 +333,444 @@
         </div>
     </header>
     <!-- //Header Container  -->
-    <div class="main-container container">
-        <ul class="breadcrumb">
-            <li><a href="#"><i class="fa fa-home"></i></a></li>
-            <li><a href="#">ProductRegister</a></li>
-        </ul>
-        <div class="row">
-            <div id="content" class="col-sm-12">
-                <h2 class="title">Sản phẩm muốn bán</h2>
-                <div class="form-group required">
-                    <label class="col-sm-2 control-label" >Tên sản phẩm: </label>
-                    <div class="col-sm-10">
-                        <input type="text" name="title" value="" class="textCtrl floatInput" maxlength="100" autofocus="true" id="ctrl_title_thread_create" tabindex="2">
+
+    <!-- Main Container  -->
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Product Register</a></li>
+    </ul>
+    <div class="row">
+        <div id="content" class="col-sm-12">
+            <h2 class="title">Thông tin cơ bản</h2>
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
+                <fieldset id="account">
+                    <legend>Personal Details</legend>
+                    <div class="form-group required" style="display: none;">
+                        <label class="col-sm-2 control-label">Customer Group</label>
+                        <div class="col-sm-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="customer_group_id" value="1" checked="checked"> Default
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-firstname">Tên sản phẩm</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nhập vào" value="" placeholder="Nhập vào" id="input-firstname" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-lastname">Mô tả sản phẩm</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nhập vào" value="" placeholder="Nhập vào"  id="input-lastname" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-email">E-Mail</label>
+                        <div class="col-sm-10">
+                            <input type="email" name="nhập vào" value="" placeholder="Nhập vào" id="input-email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-telephone">Số điện thoại</label>
+                        <div class="col-sm-10">
+                            <input type="tel" name="nhập vào" value="" placeholder="Nhập vào" id="input-telephone" class="form-control">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="address">
+                    <legend>Địa chỉ </legend>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-address-1">Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="address_1" value="" placeholder="Address" id="input-address-1" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-city">City</label>
+                        <div class="col-sm-10">
+                            <select name="city_id" id="input-city" class="form-control">
+                                <option value=""> --- Please Select --- </option>
+                                <option value="1">An Giang</option>
+                                <option value="2">Bắc Cạn</option>
+                                <option value="3">Bắc Ninh</option>
+                                <option value="4">Bắc Giang</option>
+                                <option value="5">Bến Tre</option>
+                                <option value="6">Bà Rịa-Vũng Tàu</option>
+                                <option value="7">Bình Dương</option>
+                                <option value="8">Bình Phước</option>
+                                <option value="9">Cần Thơ</option>
+                                <option value="10">Cao Bằng</option>
+                                <option value="11">Cà Mau</option>
+                                <option value="12">Hà Giang</option>
+                                <option value="13">Hà Nam</option>
+                                <option value="14">Hà Nội</option>
+                                <option value="15">Hà Tĩnh</option>
+                                <option value="16">Hải Phòng</option>
+                                <option value="17">Hải Dương</option>
+                                <option value="18">Hưng Yên</option>
+                                <option value="19">Khánh Hòa</option>
+                                <option value="20">Kiên Giang</option>
+                                <option value="22">Kon Tum</option>
+                                <option value="23">Lạng Sơn</option>
+                                <option value="24">Lai Châu</option>
+                                <option value="25">Lào Cai</option>
+                                <option value="26">Long An</option>
+                                <option value="27">Nam Định</option>
+                                <option value="28">Nghệ An</option>
+                                <option value="29">Ninh Bình</option>
+                                <option value="30">Ninh Thuận</option>
+                                <option value="31">Phú Thọ</option>
+                                <option value="32">Quảng Bình</option>
+                                <option value="33">Quảng Trị</option>
+                                <option value="34">Quảng Ngãi</option>                                <option value="33">Quảng Trị</option>
+                                <option value="35">Thái Bình</option>
+                                <option value="36">Thái Nguyên</option>
+                                <option value="37">Thanh Hóa</option>
+                                <option value="38">Thừa Thiên Huế</option>
+                                <option value="39">TP Hồ Chí Minh</option>
+                                <option value="40">Vĩnh Long</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-address-1">Detailed Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="address_1" value="" placeholder="Số nhà,tên đường,v.v..." class="form-control">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Quản lý hình ảnh</legend>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-address-1">Hình ảnh sản phẩm</label>
+                        <div class="col-sm-10">
+                            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+                            <div class="container center">
+                                </div>
+
+                                <form name="upload" method="post" action="#" enctype="multipart/form-data" accept-charset="utf-8">
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-3 center">
+                                            <div class="btn-container">
+                                                <!--the three icons: default, ok file (img), error file (not an img)-->
+                                                <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+                                                <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+                                                <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+                                                <!--this field changes dinamically displaying the filename we are trying to upload-->
+                                                <p id="namefile">Only pics allowed! (jpg,jpeg,bmp,png)</p>
+                                                <!--our custom btn which which stays under the actual one-->
+                                                <button type="button" id="btnup" class="btn btn-primary btn-lg">Browse for your pic!</button>
+                                                <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
+                                                <input type="file" value="" name="fileup" id="fileup">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--additional fields-->
+                                </form>
+                            </div>
+                        </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-lastname">Giá Tiền</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nhập vào" value="" placeholder="Giá tiền muốn bán" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" >Tình trạng sản phẩm</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input type="radio" name="newsletter" value="1"> Mới 100%
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="newsletter" value="0" checked="checked"> Khác( Mô tả)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
+                            <input type="submit" value="Submit!" class="btn btn-primary" id="submitbtn">
+                            <button type="button" class="btn btn-default" disabled="disabled" id="fakebtn">Submit! <i class="fa fa-minus-circle"></i></button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //Main Container -->
+<!-- Footer Container -->
+<footer class="footer-container typefooter-2">
+    <!-- Footer Top Container -->
+
+    <div class="container">
+        <div class="row row_cd6l  footer-top ">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col_mt2u  col-style">
+                <div class="livechat">
+                    <a href="#"><img src="image/catalog/banners/f2-livechat.png" alt="image"></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col_1gyn  col-style">
+                <div class="socials-w">
+                    <h2>Follow socials</h2>
+                    <ul class="socials">
+                        <li class="facebook"><a href="https://www.facebook.com/MagenTech" target="_blank"><i
+                                class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                        <li class="twitter"><a href="https://twitter.com/smartaddons" target="_blank"><i
+                                class="fa fa-twitter"></i><span>Twitter</span></a></li>
+                        <li class="google_plus"><a href="https://plus.google.com/u/0/+Smartaddons/posts"
+                                                   target="_blank"><i class="fa fa-google-plus"></i><span>Google Plus</span></a>
+                        </li>
+                        <li class="pinterest"><a href="https://www.pinterest.com/smartaddons/" target="_blank"><i
+                                class="fa fa-pinterest"></i><span>Pinterest</span></a></li>
+                        <li class="youtube"><a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a>
+                        </li>
+                        <li class="linkedin"><a href="#" target="_blank"><i class="fa fa-linkedin"></i><span>linkedin</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col_jams  hidden-sm hidden-xs">
+                <div class="fbanner">
+                    <a href="#"><img src="image/catalog/banners/f2-banner.png" alt="image"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /Footer Top Container -->
+
+    <div class="footer-middle ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-infos">
+                    <div class="infos-footer">
+                        <a href="#"><img src="image/catalog/logo2.png" alt="image"></a>
+                        <ul class="menu">
+                            <li class="adres">
+                                San Luis potosí, centro historico, 78000 san luis potosí, SPL, Mexico
+                            </li>
+                            <li class="phone">
+                                (+0214)0 315 215 - (+0214)0 315 215
+                            </li>
+                            <li class="mail">
+                                <a href="mailto:contact@opencartworks.com">contact@opencartworks.com</a>
+                            </li>
+                            <li class="time">
+                                Open time: 8:00AM - 6:00PM
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-style">
+                    <div class="box-information box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">Information</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Warranty And Services</a></li>
+                                    <li><a href="#">Support 24/7 page</a></li>
+                                    <li><a href="#">Product Registration</a></li>
+                                    <li><a href="#">Product Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-    <p class="productTitleExample">Ví dụ: Điện thoại Iphone X, loa Bose...</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-sty    le col-clear2">
+                    <div class="box-account box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">My Account</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">Brands</a></li>
+                                    <li><a href="#">Gift Certificates</a></li>
+                                    <li><a href="#">Affiliates</a></li>
+                                    <li><a href="#">Specials</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Custom Link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-clear">
+                    <div class="box-service box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">Categories</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">Event & Party Supplies</a></li>
+                                    <li><a href="#">Home Improvement</a></li>
+                                    <li><a href="#">Lamps & Light Fixtures</a></li>
+                                    <li><a href="#">Kitchen & Bath Fixtures</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                    <li><a href="#">Kitchen & Dining</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-style">
+                    <div class="box-service box-footer">
+                        <div class="module clearfix">
+                            <h3 class="modtitle">Services</h3>
+                            <div class="modcontent">
+                                <ul class="menu">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Returns</a></li>
+                                    <li><a href="#">Support</a></li>
+                                    <li><a href="#">Site Map</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                    <li><a href="#">Custom Link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-    <input type="hidden" name="attachment_hash" value="2c6d7af56f42135b8779b0a01c3c5a41">
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 col-style col-newsl">
+                    <div class="module newsletter-footer1">
+                        <div class="newsletter">
 
-    <div class="UploadZone" data-upload-url="https://nhattao.com/attachments/do-upload.json?hash=2c6d7af56f42135b8779b0a01c3c5a41&amp;content_type=tinhte_globalcreator"
-         data-existing-total="0" data-max-images="15" data-error="You may not upload any more files with this message. You may attach {total} files in total."
-         data-preview-template="<div class=&quot;UploadZonePreviewItem&quot;>
-			<span class=&quot;UploadZonePreviewImg&quot;>
-				<span class=&quot;UploadZoneDeleter&quot; data-dz-remove><i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;></i></span>
-			</span>
+                            <div class="title-block">
+                                <div class="page-heading font-title">
+                                    Signup for Newsletter
+                                </div>
+                                <div class="promotext">We’ll never share your email address with a third-party.
+                                </div>
+                            </div>
 
-			<span class=&quot;UploadZonePreviewText&quot; data-text=&quot;Ảnh {current}/{max}&quot;></span>
-		</div>
-	" data-holder-template="<div class=&quot;UploadZoneHolder&quot;><span></span></div>">
+                            <div class="block_content">
+                                <form method="post" id="signup" name="signup"
+                                      class="form-group form-inline signup send-mail">
+                                    <div class="form-group">
+                                        <div class="input-box">
+                                            <input type="email" placeholder="Your email address..." value=""
+                                                   class="form-control" id="txtemail" name="txtemail" size="55">
+                                        </div>
+                                        <div class="subcribe">
+                                            <button class="btn btn-primary btn-default font-title" type="submit"
+                                                    onclick="return subscribe_newsletter();" name="submit">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
 
 
-        <div class="UploadZonePreviewItem addImage" dz-preview-adder="">
+                            </div>
+                            <!--/.modcontent-->
+                        </div>
+                    </div>
+                    <ul class="apps">
+                        <li>
+                            <a href="#"><img src="image/catalog/demo/payment/app-1.png" alt="image"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/catalog/demo/payment/app-2.png" alt="image"></a>
+                        </li>
+                    </ul>
 
-            <label class="UploadButton" for="ctrl_xfServerUniqueId1">
-                <input type="file" name="__xfServerUniqueId1" id="ctrl_xfServerUniqueId1" accept="image/*" multiple="" class="UploadButtonInput">
-                <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                <span>Thêm ảnh</span>
-            </label>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="middle-content">
+            <div class="des">
+                <p>Online Shopping in UAE, Dubai & Abu Dhabi.AWOK.com is offering the lowest prices in UAE to offer
+                    the best online shopping experience in UAE.</p>
+                <p><span>About Us:</span> With the idea of creating the ideal destination for online shopping in
+                    UAE, AWOK.com was created back in 2013 with catalog of all electronic gadgets. It branched out
+                    to one-stop shop for products of all categories. Awok.com makes it easy for you to shop easily
+                    from the comfort of your home. Shopping online at Awok.com is simple, fast, secure and easy.</p>
+                <p><span>Products:</span> From mobiles to tablets, laptops to electronics, jewellery to cosmetics,
+                    watches to sunglasses, television to gaming consoles we pride ourselves on selling all the
+                    products that are hip, trend and are valuable to our customers at Awok.com. We sell plethora of
+                    items from the brands you love to shop from including but not limited to Adidas, Apple, CK
+                    (Calvin Klein), HP (Hewlett-Packard), Microsoft and more.</p>
+                <p><span>Offers:</span> Awok.com is one of the preferred stores for online shopping in UAE and for
+                    all the right reasons such as convenience, cost-effective, product quality and personalized
+                    service. We have wide range of offers available which provides you with an opportunity to buy
+                    always at low prices. We provided thousands of deals every day along with bundle of products to
+                    provide you even more savings. Payment & Shipping: We at Awok.com make best effort for your
+                    shopping experience to be as hassle free and smooth as possible. We provide you multiple payment
+                    methods including cash on delivery and online payments. We also run our own logistics to make
+                    sure your purchased item(s) reaches you as quick as possible in the best possible condition.ALL
+                    OFFERS IN UAE:Special offers/Daily Deals/Bundle offers</p>
+            </div>
+            <p><span>ALL OFFERS IN UAE:</span><a href="#">Special offers</a> / <a href="#">Daily Deals</a> / <a
+                    href="#">Bundle offers</a></p>
+            <p><span>Computer & ACCESSORIES IN UAE:</span><a href="#">Acer Laptops</a> / <a href="#">Apple
+                Macbooks</a> / <a href="#">Notebook</a> / <a href="#">Laptops</a></p>
+            <p><span>HOME & KITCHEN APPLIANCES IN UAE:</span><a href="#">DSLR Cameras</a> / <a href="#">Canon
+                Cameras</a> / <a href="#">Apple Cameras</a> / <a href="#">Sony Cameras</a> / <a href="#">Digital
+                Cameras</a></p>
+            <p><span>TABLETS & ACCESSORIES IN UAE:</span><a href="#">Apple iPads</a> / <a href="#">Samsung
+                Tablets</a> / <a href="#">Windows Tablets</a> / <a href="#">Micromax Tablets</a> / <a href="#">Asus
+                Tablets</a></p>
         </div>
 
-        <div class="UploadZoneOverlay">
+    </div>
+    <!-- Footer Bottom Container -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
 
-            <label class="UploadButton" for="ctrl_xfServerUniqueId2">
-                <input type="file" name="__xfServerUniqueId2" id="ctrl_xfServerUniqueId2" accept="image/*" multiple="" class="UploadButtonInput">
-                <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                <span>Thêm ảnh</span>
-            </label>
-
-            <div class="UploadButtonText">
-                <p class="UploadDragText">Hoặc kéo ảnh vào</p>
-                <p class="helpText">(Tối đa 15 ảnh)</p>
+                <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 copyright-w">
+                    <div class="copyright">
+                        SuperMarket © 2018 Demo Store. All Rights Reserved. Designed by <a
+                            href="http://www.opencartworks.com/" target="_blank">OpenCartWorks.Com</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12 payment-w">
+                    <img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
+                </div>
             </div>
         </div>
 
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        <div class="UploadZoneHolder"><span></span>
-        </div>
-        </div>
-    <p class="UploadGuideText">Gợi ý hình ảnh (Chụp rõ, đủ sáng, hạn chế mờ...)</p>
-
-
-    <div class="GlobalCreator_ThreadFormSep"></div>
-
-    <div class="field FloatInputLabel">
-
-        <input name="classified_price" value="" placeholder="" class="textCtrl TC_inputPrice floatInput"
-               data-currency="vnd" data-warning-message="Giá bạn đã nhập có vẻ chưa đúng. Bạn đã nhập nhỏ hơn {price}. Vui lòng kiểm tra lại giá bạn đã nhập để chắc rằng bạn đã nhập chính xác."
-               data-warning-price="50000" data-invalid-price-error="Giá mua bán đặt có vẻ không đúng. Vui lòng kiểm tra lại giá mua bán (số hoặc số lẻ)"
-               type="text" size="15" maxlength="12" id="ctrl_GlobalCreator_classified_price">
-        <label for="ctrl_GlobalCreator_classified_price" class="fieldLabel">Giá tiền muốn bán</label>
     </div>
+    <!-- /Footer Bottom Container -->
 
-    <div class="GlobalCreator_ThreadFormSep"></div>
-    <label for="ctrl_classified_message_html_enabled">
-        <input type="checkbox" name="classified_message_html_enabled" value="1" onclick="$('#ctrl_description_hider').toggleClass('is-visible')" id="ctrl_classified_message_html_enabled">
-        Thêm mô tả chi tiết sản phẩm (Tùy chọn)
-    </label>
-    <div id="ctrl_description_hider">
-        <textarea class="textCtrl Elastic TextField" name="message_html" placeholder="Mô tả chi tiết (Tuỳ chọn)"></textarea>
-    </div>
-</div>
-    <h2 class="GlobalCreator_ThreadFormHeading">Sản phẩm thuộc danh mục nào ?</h2>
-    <ul class="GlobalCreator_ThreadFormNodeAuto">
-        <li class="suggested-explain" style="display: none">Khu vực đăng bài dưới đây được chọn tự động, vui lòng kiểm tra lại và sửa nếu cần thiết.</li>
-        <li>
-            <select class="textCtrl select--parentNodeId TextField" name="parent_node_id">
-                <option value="0">
-                    Chọn khu vực ....
-                </option>
 
-                <option data-depth="0" value="531" disabled="disabled">
+    <!--Back To Top-->
+    <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+</footer>
+<!-- //end Footer Container -->
+<!-- Include Libs & Plugins
+	============================================ -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="js/slick-slider/slick.js"></script>
+<script type="text/javascript" src="js/themejs/libs.js"></script>
+<script type="text/javascript" src="js/unveil/jquery.unveil.js"></script>
+<script type="text/javascript" src="js/countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+<script type="text/javascript" src="js/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
 
-                    Các khu vực bán hàng
-                </option>
 
-                <option data-depth="1" value="543" disabled="disabled">
-                    &nbsp;&nbsp;
-                    Điện thoại
-                </option>
+<!-- Theme files
+============================================ -->
 
-                <option data-depth="2" value="219">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    iPhone
-                </option>
 
-                <option data-depth="2" value="544">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Điện thoại Android
-                </option>
-
-                <option data-depth="2" value="533">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Sim điện thoại
-                </option>
-
-                <option data-depth="2" value="570">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Smartphone khác
-                </option>
-
-                <option data-depth="2" value="218">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    BlackBerry
-                </option>
-
-                <option data-depth="2" value="572">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Điện thoại phổ thông
-                </option>
-
-                <option data-depth="2" value="545">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Windows Phone
-                </option>
-
-                <option data-depth="2" value="547">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Linh kiện &amp; phụ kiện
-                </option>
-
-                <option data-depth="2" value="761">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Cần mua &amp; Trao đổi
-                </option>
-
-                <option data-depth="1" value="548">
-                    &nbsp;&nbsp;
-                    Máy tính bảng
-                </option>
-
-                <option data-depth="1" value="553">
-                    &nbsp;&nbsp;
-                    Máy tính
-                </option>
-
-                <option data-depth="1" value="556">
-                    &nbsp;&nbsp;
-                    Camera
-                </option>
-
-                <option data-depth="1" value="602" disabled="disabled">
-                    &nbsp;&nbsp;
-                    Gia dụng
-                </option>
-
-                <option data-depth="2" value="647">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Nghe nhìn
-                </option>
-
-                <option data-depth="2" value="654">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Điện lạnh
-                </option>
-
-                <option data-depth="2" value="660">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Nhà bếp
-                </option>
-
-                <option data-depth="2" value="669">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Điện máy
-                </option>
-
-                <option data-depth="2" value="675">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Sức khoẻ | Làm đẹp
-                </option>
-
-                <option data-depth="2" value="683">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    An ninh | An toàn
-                </option>
-
-                <option data-depth="2" value="746">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Đồng hồ
-                </option>
-
-                <option data-depth="2" value="749">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Mắt kính
-                </option>
-
-                <option data-depth="1" value="695">
-                    &nbsp;&nbsp;
-                    Thiết bị văn phòng
-                </option>
-
-                <option data-depth="1" value="759">
-                    &nbsp;&nbsp;
-                    Máy móc công nghiệp
-                </option>
-
-                <option data-depth="1" value="532" disabled="disabled">
-                    &nbsp;&nbsp;
-                    Xe
-                </option>
-
-                <option data-depth="2" value="704">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Xe máy
-                </option>
-
-                <option data-depth="2" value="708">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Ô tô
-                </option>
-
-                <option data-depth="2" value="538">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Xe đạp
-                </option>
-
-                <option data-depth="2" value="714">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Xe đạp/Xe máy điện
-                </option>
-
-                <option data-depth="2" value="713">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Xe chuyên dụng
-                </option>
-
-                <option data-depth="2" value="717">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Phụ tùng xe máy
-                </option>
-
-                <option data-depth="2" value="721">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Phụ tùng ô tô
-                </option>
-
-                <option data-depth="2" value="584">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Phụ tùng xe đạp
-                </option>
-
-                <option data-depth="2" value="716">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Phụ tùng xe đạp điện
-                </option>
-
-                <option data-depth="1" value="760">
-                    &nbsp;&nbsp;
-                    Thiết bị thông minh
-                </option>
-
-                <option data-depth="1" value="765">
-                    &nbsp;&nbsp;
-                    Giải trí, thể thao
-                </option>
-
-                <option data-depth="1" value="589">
-                    &nbsp;&nbsp;
-                    Cần mua &amp; Trao đổi
-                </option>
-
-                <option data-depth="0" value="586">
-
-                    Thông tin hữu ích
-                </option>
-
-            </select>
-        </li>
-
-        <li>
-            <select class="textCtrl GlobalCreator_SubChoices TextField" name="node_id" style="display: none"
-                    data-parent-selector=".select--parentNodeId" data-choices="{&quot;219&quot;:{&quot;parent_value&quot;:219,&quot;text&quot;:&quot;iPhone&quot;},&quot;544&quot;:{&quot;parent_value&quot;:544,&quot;text&quot;:&quot;\u0110i\u1ec7n tho\u1ea1i Android&quot;},&quot;214&quot;:{&quot;parent_value&quot;:533,&quot;text&quot;:&quot;Sim s\u1ed1 \u0111\u1eb9p&quot;},&quot;542&quot;:{&quot;parent_value&quot;:533,&quot;text&quot;:&quot;Sim d\u1eef li\u1ec7u (3G\/4G)&quot;},&quot;570&quot;:{&quot;parent_value&quot;:570,&quot;text&quot;:&quot;Smartphone kh\u00e1c&quot;},&quot;218&quot;:{&quot;parent_value&quot;:218,&quot;text&quot;:&quot;BlackBerry&quot;},&quot;572&quot;:{&quot;parent_value&quot;:572,&quot;text&quot;:&quot;\u0110i\u1ec7n tho\u1ea1i ph\u1ed5 th\u00f4ng&quot;},&quot;545&quot;:{&quot;parent_value&quot;:545,&quot;text&quot;:&quot;Windows Phone&quot;},&quot;547&quot;:{&quot;parent_value&quot;:547,&quot;text&quot;:&quot;Linh ki\u1ec7n &amp; ph\u1ee5 ki\u1ec7n&quot;},&quot;761&quot;:{&quot;parent_value&quot;:761,&quot;text&quot;:&quot;C\u1ea7n mua &amp; Trao \u0111\u1ed5i&quot;},&quot;569&quot;:{&quot;parent_value&quot;:548,&quot;text&quot;:&quot;iPad&quot;},&quot;549&quot;:{&quot;parent_value&quot;:548,&quot;text&quot;:&quot;M\u00e1y t\u00ednh b\u1ea3ng Android&quot;},&quot;550&quot;:{&quot;parent_value&quot;:548,&quot;text&quot;:&quot;M\u00e1y t\u00ednh b\u1ea3ng Windows&quot;},&quot;551&quot;:{&quot;parent_value&quot;:548,&quot;text&quot;:&quot;M\u00e1y t\u00ednh b\u1ea3ng kh\u00e1c&quot;},&quot;552&quot;:{&quot;parent_value&quot;:548,&quot;text&quot;:&quot;Linh ki\u1ec7n &amp; ph\u1ee5 ki\u1ec7n&quot;},&quot;145&quot;:{&quot;parent_value&quot;:553,&quot;text&quot;:&quot;M\u00e1y t\u00ednh Windows&quot;},&quot;483&quot;:{&quot;parent_value&quot;:553,&quot;text&quot;:&quot;M\u00e1y t\u00ednh Apple&quot;},&quot;582&quot;:{&quot;parent_value&quot;:553,&quot;text&quot;:&quot;M\u00e1y t\u00ednh Chrome OS&quot;},&quot;554&quot;:{&quot;parent_value&quot;:553,&quot;text&quot;:&quot;Server | Workstation&quot;},&quot;641&quot;:{&quot;parent_value&quot;:553,&quot;text&quot;:&quot;M\u00e0n h\u00ecnh m\u00e1y vi t\u00ednh&quot;},&quot;555&quot;:{&quot;parent_value&quot;:553,&quot;text&quot;:&quot;Linh ki\u1ec7n &amp; ph\u1ee5 ki\u1ec7n&quot;},&quot;571&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;M\u00e1y \u1ea3nh DSLR&quot;},&quot;557&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;M\u00e1y \u1ea3nh Compact&quot;},&quot;558&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;M\u00e1y \u1ea3nh Mirrorless&quot;},&quot;559&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;M\u00e1y quay phim&quot;},&quot;560&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;\u1ed0ng k\u00ednh&quot;},&quot;561&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n Camera&quot;},&quot;731&quot;:{&quot;parent_value&quot;:556,&quot;text&quot;:&quot;Flycam&quot;},&quot;564&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;TV&quot;},&quot;223&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;D\u00e0n m\u00e1y nghe nh\u1ea1c&quot;},&quot;648&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;Loa \/ Tai nghe&quot;},&quot;649&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;\u0110\u1ea7u \u0111\u0129a \/ \u0110\u1ea7u karaoke&quot;},&quot;650&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;Ampli \/ Micro&quot;},&quot;583&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;Tivi Box&quot;},&quot;463&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;M\u00e1y \u0111\u1ecdc s\u00e1ch&quot;},&quot;652&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;M\u00e1y ghi \u00e2m&quot;},&quot;568&quot;:{&quot;parent_value&quot;:647,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n nghe nh\u00ecn&quot;},&quot;605&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;M\u00e1y \u0111i\u1ec1u h\u00f2a&quot;},&quot;608&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;T\u1ee7 l\u1ea1nh \/ \u0111\u00f4ng \/ m\u00e1t&quot;},&quot;611&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;M\u00e1y gi\u1eb7t \/ s\u1ea5y qu\u1ea7n \u00e1o&quot;},&quot;655&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;M\u00e1y n\u01b0\u1edbc n\u00f3ng&quot;},&quot;656&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;M\u00e1y c\u1ea3i thi\u1ec7n kh\u00f4ng kh\u00ed&quot;},&quot;657&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;M\u00e1y n\u01b0\u1edbc u\u1ed1ng n\u00f3ng l\u1ea1nh&quot;},&quot;658&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb s\u01b0\u1edfi \u1ea5m&quot;},&quot;659&quot;:{&quot;parent_value&quot;:654,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n \u0111i\u1ec7n l\u1ea1nh&quot;},&quot;661&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;B\u1ebfp gas&quot;},&quot;623&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;B\u1ebfp t\u1eeb | B\u1ebfp h\u1ed3ng ngo\u1ea1i&quot;},&quot;620&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;N\u1ed3i c\u01a1m \u0111i\u1ec7n&quot;},&quot;662&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;N\u1ed3i \u00e1p su\u1ea5t&quot;},&quot;663&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;N\u1ed3i, ch\u1ea3o \u0111i\u1ec7n kh\u00e1c&quot;},&quot;617&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;L\u00f2 vi s\u00f3ng | L\u00f2 n\u01b0\u1edbng&quot;},&quot;664&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;\u1ea4m \u0111un n\u01b0\u1edbc&quot;},&quot;665&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;M\u00e1y h\u00fat kh\u00f3i&quot;},&quot;638&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;M\u00e1y xay\/\u00e9p\/\u0111\u00e1nh tr\u1ee9ng&quot;},&quot;666&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;M\u00e1y r\u1eeda\/s\u1ea5y ch\u00e9n&quot;},&quot;667&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb nh\u00e0 b\u1ebfp kh\u00e1c&quot;},&quot;668&quot;:{&quot;parent_value&quot;:660,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n nh\u00e0 b\u1ebfp&quot;},&quot;614&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;Qu\u1ea1t \u0111i\u1ec7n&quot;},&quot;626&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;B\u00e0n \u1ee7i&quot;},&quot;635&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;M\u00e1y h\u00fat b\u1ee5i&quot;},&quot;670&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;M\u00e1y l\u1ecdc n\u01b0\u1edbc&quot;},&quot;671&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb chi\u1ebfu s\u00e1ng&quot;},&quot;672&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb an to\u00e0n th\u1ef1c ph\u1ea9m&quot;},&quot;673&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;M\u00e1y may&quot;},&quot;674&quot;:{&quot;parent_value&quot;:669,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n gia d\u1ee5ng&quot;},&quot;676&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;M\u00e1y s\u1ea5y\/c\u1eaft\/t\u1ea1o ki\u1ec3u t\u00f3c&quot;},&quot;677&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;M\u00e1y c\u1ea1o r\u00e2u | M\u00e1y t\u1ec9a l\u00f4ng&quot;},&quot;678&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;M\u00e1y r\u1eeda m\u1eb7t&quot;},&quot;679&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;M\u00e1y t\u1eadp th\u1ec3 d\u1ee5c&quot;},&quot;680&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;M\u00e1y massage&quot;},&quot;681&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb theo d\u00f5i s\u1ee9c kho\u1ebb&quot;},&quot;682&quot;:{&quot;parent_value&quot;:675,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n s\u1ee9c kho\u1ebb\/l\u00e0m \u0111\u1eb9p&quot;},&quot;566&quot;:{&quot;parent_value&quot;:683,&quot;text&quot;:&quot;Camera quan s\u00e1t&quot;},&quot;653&quot;:{&quot;parent_value&quot;:683,&quot;text&quot;:&quot;B\u00e1o \u0111\u1ed9ng&quot;},&quot;684&quot;:{&quot;parent_value&quot;:683,&quot;text&quot;:&quot;\u1ed4 kho\u00e1&quot;},&quot;685&quot;:{&quot;parent_value&quot;:683,&quot;text&quot;:&quot;K\u00e9t s\u1eaft&quot;},&quot;686&quot;:{&quot;parent_value&quot;:683,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb c\u1ee9u ho\u1ea3&quot;},&quot;747&quot;:{&quot;parent_value&quot;:746,&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3 \u0111i\u1ec7n t\u1eed&quot;},&quot;748&quot;:{&quot;parent_value&quot;:746,&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3 th\u1eddi trang&quot;},&quot;753&quot;:{&quot;parent_value&quot;:746,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n \u0111\u1ed3ng h\u1ed3&quot;},&quot;751&quot;:{&quot;parent_value&quot;:749,&quot;text&quot;:&quot;M\u1eaft k\u00ednh c\u1eadn th\u1ecb \/ vi\u1ec5n th\u1ecb&quot;},&quot;752&quot;:{&quot;parent_value&quot;:749,&quot;text&quot;:&quot;M\u1eaft k\u00ednh th\u1eddi trang&quot;},&quot;645&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;M\u00e1y in | M\u00e1y scan | M\u00e1y fax&quot;},&quot;696&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;M\u00e1y photocopy&quot;},&quot;565&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;M\u00e1y chi\u1ebfu&quot;},&quot;567&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb m\u1ea1ng, 4G&quot;},&quot;220&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;Th\u1ebb nh\u1edb | L\u01b0u tr\u1eef&quot;},&quot;697&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;M\u00e1y hu\u1ef7 gi\u1ea5y&quot;},&quot;698&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;M\u00e1y \u0111\u1ebfm ti\u1ec1n&quot;},&quot;699&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;M\u00e1y t\u00ednh b\u1ecf t\u00fai&quot;},&quot;700&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;T\u1eeb \u0111i\u1ec3n \u0111i\u1ec7n t\u1eed&quot;},&quot;701&quot;:{&quot;parent_value&quot;:695,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n v\u0103n ph\u00f2ng&quot;},&quot;687&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;\u0110i\u1ec7n c\u01a1&quot;},&quot;688&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;M\u00e1y b\u01a1m n\u01b0\u1edbc&quot;},&quot;689&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;M\u00e1y ph\u00e1t \u0111i\u1ec7n&quot;},&quot;690&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;M\u00e1y khoan, m\u00e0i, c\u1eaft&quot;},&quot;691&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;M\u00e1y h\u00e0n \u0111i\u1ec7n&quot;},&quot;692&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;\u1ed4n \u00e1p&quot;},&quot;693&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;M\u00e1y phun, x\u1ecbt, r\u1eeda&quot;},&quot;694&quot;:{&quot;parent_value&quot;:759,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n \u0111i\u1ec7n c\u01a1&quot;},&quot;536&quot;:{&quot;parent_value&quot;:704,&quot;text&quot;:&quot;Xe s\u1ed1&quot;},&quot;705&quot;:{&quot;parent_value&quot;:704,&quot;text&quot;:&quot;Xe ga&quot;},&quot;706&quot;:{&quot;parent_value&quot;:704,&quot;text&quot;:&quot;Xe m\u00f4 t\u00f4 ph\u00e2n kh\u1ed1i l\u1edbn&quot;},&quot;537&quot;:{&quot;parent_value&quot;:708,&quot;text&quot;:&quot;Xe 5 ch\u1ed7&quot;},&quot;709&quot;:{&quot;parent_value&quot;:708,&quot;text&quot;:&quot;Xe 7 ch\u1ed7&quot;},&quot;710&quot;:{&quot;parent_value&quot;:708,&quot;text&quot;:&quot;Xe kh\u00e1ch&quot;},&quot;711&quot;:{&quot;parent_value&quot;:708,&quot;text&quot;:&quot;Xe b\u00e1n t\u1ea3i&quot;},&quot;712&quot;:{&quot;parent_value&quot;:708,&quot;text&quot;:&quot;Xe t\u1ea3i&quot;},&quot;538&quot;:{&quot;parent_value&quot;:538,&quot;text&quot;:&quot;Xe \u0111\u1ea1p&quot;},&quot;714&quot;:{&quot;parent_value&quot;:714,&quot;text&quot;:&quot;Xe \u0111\u1ea1p\/Xe m\u00e1y \u0111i\u1ec7n&quot;},&quot;713&quot;:{&quot;parent_value&quot;:713,&quot;text&quot;:&quot;Xe chuy\u00ean d\u1ee5ng&quot;},&quot;539&quot;:{&quot;parent_value&quot;:717,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n xe m\u00e1y&quot;},&quot;718&quot;:{&quot;parent_value&quot;:717,&quot;text&quot;:&quot;Ph\u1ee5 t\u00f9ng thay th\u1ebf&quot;},&quot;719&quot;:{&quot;parent_value&quot;:717,&quot;text&quot;:&quot;Nh\u1edbt xe m\u00e1y&quot;},&quot;720&quot;:{&quot;parent_value&quot;:717,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n cho biker&quot;},&quot;540&quot;:{&quot;parent_value&quot;:721,&quot;text&quot;:&quot;Ph\u1ee5 ki\u1ec7n \u00f4 t\u00f4&quot;},&quot;722&quot;:{&quot;parent_value&quot;:721,&quot;text&quot;:&quot;Ph\u1ee5 t\u00f9ng thay th\u1ebf&quot;},&quot;723&quot;:{&quot;parent_value&quot;:721,&quot;text&quot;:&quot;Nh\u1edbt \u00f4 t\u00f4&quot;},&quot;584&quot;:{&quot;parent_value&quot;:584,&quot;text&quot;:&quot;Ph\u1ee5 t\u00f9ng xe \u0111\u1ea1p&quot;},&quot;716&quot;:{&quot;parent_value&quot;:716,&quot;text&quot;:&quot;Ph\u1ee5 t\u00f9ng xe \u0111\u1ea1p \u0111i\u1ec7n&quot;},&quot;762&quot;:{&quot;parent_value&quot;:760,&quot;text&quot;:&quot;Nh\u00e0 th\u00f4ng minh&quot;},&quot;585&quot;:{&quot;parent_value&quot;:760,&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3 th\u00f4ng minh&quot;},&quot;750&quot;:{&quot;parent_value&quot;:760,&quot;text&quot;:&quot;M\u1eaft k\u00ednh th\u00f4ng minh&quot;},&quot;763&quot;:{&quot;parent_value&quot;:760,&quot;text&quot;:&quot;Thi\u1ebft b\u1ecb th\u00f4ng minh kh\u00e1c&quot;},&quot;764&quot;:{&quot;parent_value&quot;:760,&quot;text&quot;:&quot;Linh ki\u1ec7n &amp; ph\u1ee5 ki\u1ec7n&quot;},&quot;651&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;Nh\u1ea1c c\u1ee5&quot;},&quot;222&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;M\u00e1y ch\u01a1i game&quot;},&quot;221&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;M\u00e1y nghe nh\u1ea1c&quot;},&quot;767&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;D\u1ee5ng c\u1ee5 th\u1ec3 thao&quot;},&quot;766&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;\u0110\u1ed3 d\u00e3 ngo\u1ea1i&quot;},&quot;768&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;\u0110\u1ed3 s\u01b0u t\u1ea7m&quot;},&quot;769&quot;:{&quot;parent_value&quot;:765,&quot;text&quot;:&quot;S\u1edf th\u00edch kh\u00e1c&quot;},&quot;589&quot;:{&quot;parent_value&quot;:589,&quot;text&quot;:&quot;C\u1ea7n mua &amp; Trao \u0111\u1ed5i&quot;,&quot;require_prefix&quot;:true},&quot;643&quot;:{&quot;parent_value&quot;:586,&quot;text&quot;:&quot;X\u00e2y d\u1ef1ng th\u01b0\u01a1ng gia&quot;}}" data-prefix-selector=".select--prefixId" data-blank-choice="Chọn khu vực đăng bài...">
-
-            </select>
-        </li>
-
-        <li>
-            <select class="textCtrl select--prefixId TextField" name="prefix_id"
-                    data-prefixes="{&quot;725&quot;:[{&quot;prefixes&quot;:{&quot;95&quot;:{&quot;text&quot;:&quot;\u0110i\u1ec7n tho\u1ea1i\/Tablet&quot;},&quot;96&quot;:{&quot;text&quot;:&quot;M\u00e1y t\u00ednh&quot;},&quot;97&quot;:{&quot;text&quot;:&quot;Gia d\u1ee5ng&quot;},&quot;98&quot;:{&quot;text&quot;:&quot;Xe&quot;},&quot;99&quot;:{&quot;text&quot;:&quot;Camera&quot;},&quot;100&quot;:{&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3 th\u00f4ng minh&quot;}},&quot;text&quot;:&quot;D\u1ecbch v\u1ee5&quot;}],&quot;726&quot;:[{&quot;prefixes&quot;:{&quot;95&quot;:{&quot;text&quot;:&quot;\u0110i\u1ec7n tho\u1ea1i\/Tablet&quot;},&quot;96&quot;:{&quot;text&quot;:&quot;M\u00e1y t\u00ednh&quot;},&quot;97&quot;:{&quot;text&quot;:&quot;Gia d\u1ee5ng&quot;},&quot;98&quot;:{&quot;text&quot;:&quot;Xe&quot;},&quot;99&quot;:{&quot;text&quot;:&quot;Camera&quot;},&quot;100&quot;:{&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3 th\u00f4ng minh&quot;}},&quot;text&quot;:&quot;D\u1ecbch v\u1ee5&quot;}],&quot;727&quot;:[{&quot;prefixes&quot;:{&quot;95&quot;:{&quot;text&quot;:&quot;\u0110i\u1ec7n tho\u1ea1i\/Tablet&quot;},&quot;96&quot;:{&quot;text&quot;:&quot;M\u00e1y t\u00ednh&quot;},&quot;97&quot;:{&quot;text&quot;:&quot;Gia d\u1ee5ng&quot;},&quot;98&quot;:{&quot;text&quot;:&quot;Xe&quot;},&quot;99&quot;:{&quot;text&quot;:&quot;Camera&quot;},&quot;100&quot;:{&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3 th\u00f4ng minh&quot;}},&quot;text&quot;:&quot;D\u1ecbch v\u1ee5&quot;}],&quot;728&quot;:[{&quot;prefixes&quot;:{&quot;101&quot;:{&quot;text&quot;:&quot;Web&quot;},&quot;102&quot;:{&quot;text&quot;:&quot;\u0110\u1ed3 ho\u1ea1&quot;},&quot;103&quot;:{&quot;text&quot;:&quot;Marketing&quot;}},&quot;text&quot;:&quot;D\u1ecbch v\u1ee5&quot;}],&quot;729&quot;:[{&quot;prefixes&quot;:{&quot;104&quot;:{&quot;text&quot;:&quot;V\u1eadn chuy\u1ec3n&quot;},&quot;105&quot;:{&quot;text&quot;:&quot;Mua h\u1ed9&quot;}},&quot;text&quot;:&quot;D\u1ecbch v\u1ee5&quot;}],&quot;589&quot;:[{&quot;prefixes&quot;:{&quot;84&quot;:{&quot;text&quot;:&quot;\u0110i\u1ec7n tho\u1ea1i&quot;},&quot;86&quot;:{&quot;text&quot;:&quot;M\u00e1y t\u00ednh b\u1ea3ng&quot;},&quot;85&quot;:{&quot;text&quot;:&quot;M\u00e1y t\u00ednh&quot;},&quot;94&quot;:{&quot;text&quot;:&quot;Camera&quot;},&quot;88&quot;:{&quot;text&quot;:&quot;\u0110\u1ed3 c\u00f4ng ngh\u1ec7&quot;},&quot;89&quot;:{&quot;text&quot;:&quot;\u0110i\u1ec7n m\u00e1y&quot;},&quot;87&quot;:{&quot;text&quot;:&quot;Xe&quot;},&quot;90&quot;:{&quot;text&quot;:&quot;Sim&quot;},&quot;91&quot;:{&quot;text&quot;:&quot;\u0110\u1ed3ng h\u1ed3&quot;}},&quot;text&quot;:&quot;Lo\u1ea1i s\u1ea3n ph\u1ea9m&quot;}]}" style="display: none;"></select>
-        </li>
-    </ul>
-
-    <div class="GlobalCreator_ThreadFormSep"></div>
-
-    <div class="GlobalCreator_ThreadFormStatusText">Tình trạng sản phẩm</div>
-    <ul class="GlobalCreator_ThreadFormStatuses">
-        <li>
-            <label for="ctrl_classified_status1">
-                <input type="radio" name="classified_status" id="ctrl_classified_status1" value="1">
-                Mới 100%
-            </label>
-        </li>
-        <li>
-            <label for="ctrl_classified_status3">
-                <input type="radio" name="classified_status" id="ctrl_classified_status3" value="3">
-                Như mới
-            </label>
-        </li>
-        <li>
-            <label for="ctrl_classified_status4" style="padding-bottom: 0">
-                <input type="radio" name="classified_status" id="ctrl_classified_status4" class="Disabler" value="4">
-                Khác (Mô tả)
-            </label>
-            <ul id="ctrl_classified_status4_Disabler" style="margin-left:35px;display:none" class="disabled">
-                <li>
-                    <input type="text" name="classified_status_other" placeholder="Chi tiết tình trạng" maxlength="100" class="textCtrl TextField disabled" disabled="">
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-    <div class="GlobalCreator_ExtraFields" data-load-url="creator/extra-fields"></div>
-
-    <div class="GlobalCreator_ThreadFormSep"></div>
-
-    <label class="ThreadForm_fieldGuarantee" for="ctrl_classified_guarantee_enabled">
-        <input type="checkbox" name="classified_guarantee_enabled" value="1" id="ctrl_classified_guarantee_enabled" onclick="$('#ctrl_guarantee_date_picker').toggleClass('is-visible')">
-        <span>Còn bảo hành chính hãng tới...</span>
-    </label>
-
-    <div id="ctrl_guarantee_date_picker" class="guaranteeDateGroup">
-        <select name="classified_guarantee_month" class="textCtrl TextField">
-            <option value="0">Tháng</option>
-            <option value="1">Tháng 1</option>
-            <option value="2">Tháng 2</option>
-            <option value="3">Tháng 3</option>
-            <option value="4">Tháng 4</option>
-            <option value="5">Tháng 5</option>
-            <option value="6">Tháng 6</option>
-            <option value="7">Tháng 7</option>
-            <option value="8">Tháng 8</option>
-            <option value="9">Tháng 9</option>
-            <option value="10">Tháng 10</option>
-            <option value="11">Tháng 11</option>
-            <option value="12">Tháng 12</option>
-        </select>
-        <select name="classified_guarantee_year" class="textCtrl TextField">
-            <option value="0">Năm</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
-            <option value="2026">2026</option>
-            <option value="2027">2027</option>
-            <option value="2028">2028</option>
-            <option value="2029">2029</option>
-        </select>
-    </div>
-    <div style="height:50px"></div>
-    <div class="GlobalCreator_ThreadFormSep"></div>
-
-    <div class="GlobalCreator_ThreadFormFooter is-sticky">
-        <div class="GlobalCreator_ThreadFormFooterInner">
-            <a rel="button" class="button GlobalCreator_ThreadFormBack">
-            </a>
-            <input type="submit" value="Đăng bán" class="button primary">
-        </div>
-    </div>
-        </div></div>
-</div>
-
+<script type="text/javascript" src="js/themejs/so_megamenu.js"></script>
+<script type="text/javascript" src="js/themejs/addtocart.js"></script>
+<script type="text/javascript" src="js/themejs/application.js"></script>
 </body>
 </html>
