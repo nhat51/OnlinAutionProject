@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<OnlineAuctionMVC.Models.Product_category>
+@model IEnumerable<OnlineAuctionMVC.Models.Product>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -66,13 +67,13 @@
                     <div class="content-box">
                         <div class="image-cat">
                             <a href="category.html" title="Electronics">
-                                <img src="image/Category/@item.Cat_Image" alt="img" width="265px">
+                                <img src="image/Category/@item.Cat_Image" alt="img" width="265">
                             </a>
                         </div>
                         <div class="cat-title"><a href="category.html">@item.Category</a></div>
                     </div>
-                  }
-             </div>
+                }
+            </div>
         </div>
     </div>
     <div id="so_category_slider_188" class="so-category-slider container-slider module cate-slider1">
@@ -81,7 +82,7 @@
             <div class="page-top">
                 <div class="item-sub-cat">
                     <ul>
-                        <li><a href="#" title="Decor">Decor</a></li>
+                        <li><a asp-controller="Products" asp-action="Index" title="Decor">Decor</a></li>
                         <li><a href="#" title="Livingroom">Livingroom</a></li>
                         <li><a href="#" title="Furniture">Furniture</a></li>
                         <li><a href="#" title="Fashion">Fashion</a></li>
