@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using OnlineAuction.Areas.Identity.Data
+
+@inject SignInManager<OnlineAuctionUser> SignInManager
+@inject UserManager<OnlineAuctionUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+<li class="item-special pull-right with-sub-menu hover">
+    <a id="manage" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" class="clearfix">
+        <strong>@UserManager.GetUserName(User)</strong>
+        <b class="caret"></b>
+    </a>
+    <div class="sub-menu">
+        <div class="content">
+            <div class="row">
+                <div class="col-md">
+                    <ul class="row-list">
+                        <li>
+                            <a class="subcategory_item"
+                               href="sitemap.html">
+                                <i class="fa fa-gavel"></i>My Auctions
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subcategory_item"
+                               href="contact.html">
+                                <i class="fa fa-lock"></i>Change
+                                Password
+                            </a>
+                        </li>
+                        <li>
+                            <a class="subcategory_item"
+                               href="contact.html">
+                                <i class="fa fa-credit-card"></i>My
+                                Wallet
+                            </a>
+                        </li>
+                        <li>
+                            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button id="logout" type="submit" class="btn btn-link"><i class="fa fa-sign-out"></i>Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+}
+else
+{
+    <li class="item-special pull-right">
+        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="item-special pull-right">
+        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
