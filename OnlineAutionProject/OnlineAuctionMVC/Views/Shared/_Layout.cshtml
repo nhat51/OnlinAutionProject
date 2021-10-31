@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OnlineAuctionMVC.Models.Product_category>
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +69,7 @@
                         <!-- Logo -->
                         <div class="navbar-logo col-lg-3 col-md-3 col-sm-12 col-xs-12">
                             <div class="logo">
-                                <a href="/">
+                                <a href="@Url.Action("Index","Home")">
                                     <img src="image/catalog/logo2.png" title="Your Store"
                                          alt="Your Store" />
                                 </a>
@@ -206,168 +206,44 @@
                                                                 <b class="caret"></b>
                                                             </a>
                                                             <div class="sub-menu" style="width: 100%; display: none;">
-                                                                <div class="content">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <div class="row">
-                                                                                <div class="col-md-3 img img1">
-                                                                                    <a href="#">
-                                                                                        <img src="image/catalog/menu/megabanner/image-1.jpg"
-                                                                                             alt="banner1">
-                                                                                    </a>
+                                                                <div class="content col-sm-10">                                                                    
+                                                                 @foreach (var category in Model)
+                                                                   { <div class="row col-sm-3">
+                                                                        <div class="row col-sm-12">
+                                                                                <div class="col-lg-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 ">
+                                                                                            <a href="#">
+                                                                                                <img src="/image/Category/@category.Cat_Image" style="width:255px; height:170px">
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="col-md-3 img img2">
-                                                                                    <a href="#">
-                                                                                        <img src="image/catalog/menu/megabanner/image-2.jpg"
-                                                                                             alt="banner2">
-                                                                                    </a>
-                                                                                </div>
-                                                                                <div class="col-md-3 img img3">
-                                                                                    <a href="#">
-                                                                                        <img src="image/catalog/menu/megabanner/image-3.jpg"
-                                                                                             alt="banner3">
-                                                                                    </a>
-                                                                                </div>
-                                                                                <div class="col-md-3 img img4">
-                                                                                    <a href="#">
-                                                                                        <img src="image/catalog/menu/megabanner/image-4.jpg"
-                                                                                             alt="banner4">
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
                                                                         </div>
+                                                                        <div class="row col-sm-12">
+                                                                           <div class="col-lg-3">
+                                                                             <a href="#" class="title-submenu">@category.Category</a>
+                                                                               <div class="row">
+                                                                                   <div class="col-md-12 hover-menu">
+                                                                                        <div class="menu">
+                                                                                            <ul>
+                                                                                                
+                                                                                                    <li>
+                                                                                                        <a href="#" class="main-menu">
+                                                                                                            @category.Sub_Categories
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                
+
+                                                                                            </ul>
+                                                                                         </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                           </div>
+                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
-                                                                        <div class="col-md-3">
-                                                                            <a href="#" class="title-submenu">Automotive</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    Car
-                                                                                                    Alarms and Security
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    Car
-                                                                                                    Audio &amp; Speakers
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    Gadgets
-                                                                                                    &amp; Auto Parts
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    More
-                                                                                                    Car Accessories
-                                                                                                </a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <a href="#" class="title-submenu">Funitures</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Bathroom</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Bedroom</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Decor</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    Living
-                                                                                                    room
-                                                                                                </a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <a href="#" class="title-submenu">
-                                                                                Jewelry &amp;
-                                                                                Watches
-                                                                            </a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Earings</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    Wedding
-                                                                                                    Rings
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">
-                                                                                                    Men
-                                                                                                    Watches
-                                                                                                </a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <a href="#"
-                                                                               class="title-submenu">Electronics</a>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 hover-menu">
-                                                                                    <div class="menu">
-                                                                                        <ul>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Computer</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Smartphone</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Tablets</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="#"
-                                                                                                   class="main-menu">Monitors</a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                   }
+                                                                   
                                                                 </div>
                                                             </div>
                                                         </li>
