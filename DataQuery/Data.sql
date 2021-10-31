@@ -7,10 +7,10 @@ INSERT INTO Product_Categories VALUES
 ('Antique','Antique.jpg'),
 ('Fashion','Fashion.jpg'),
 ('Electronics','Electronic.jpg'),
-('Collection','Collection.jpg')
+('Collection','Collection.jpg'),
 ('Sports','Sports.jpg'),
 ('Toys & Game','Toys&Game.jpg'),
-('Beauty & Comestic','Beauty&Comestics.jpg'),
+('Beauty & Comestic','Beauty&Comestics.jpg')
 
 SELECT * FROM Product_Categories
 GO
@@ -46,9 +46,8 @@ INSERT INTO Sub_category VALUES
 ('Wine',6),
 ('Stamp',6),
 ('Coin',6),
-('Card',6),
+('Card',6)
 --Sports--
-(' 
 --Toys & Game--
 --Beauty&Comestic--
 SELECT * FROM Sub_category
@@ -172,7 +171,7 @@ INSERT INTO Products VALUES
 ('Moncler Enfant - New Maya puffer jacket','Moncler Enfant New Maya puffer jacket provides comfort in cold weather thanks to its padded design and a hood too. The model is 1.07 m wearing size 10 (yrs). The model is also styled with: Bonpoint double-breasted hooded trench coat, Moncler Enfant logo-print cotton sweatshirt, Moncler Enfant logo-patch pompom beanie, MM6 MAISON MARGIELA KIDS loose-fit jeans, UGG Kids fluffy yeah slides.',600,4),
 	--Jeans--
 ('AMBUSH-REGULAR FIT DENIM PANTS BLU WASHED NO CO','Composition: Cotton 100%, Leather 100%. Composition: Cotton 100%, Leather 100%. The model is 1.86 m wearing size 32 (Waist). The model is also styled with: AMBUSH turtleneck jersey T-shirt, Eytys Luciano Western-style boots, Givenchy Antigona U camera bag, Emanuele Bicocchi Stone signet ring, Wacko Maria leopard knit cardigan.',200,4),
-('ERL Cropped straight-leg jeans','Highlights: washed blue, cottons, tone washed, whiskering effect at the thighs, belt loops, front button fastening, straight leg. Made in Italy. The model is 1.78 m wearing size M. The model is also styled with: Tibi turtleneck wool knit top, Karen Wazen Kaia oversized-frame sunglasses, ERL faux-fur single-breasted jacket, Yuzefi Bom tote bag, Off-White arrow earrings.',200,4)
+('ERL Cropped straight-leg jeans','Highlights: washed blue, cottons, tone washed, whiskering effect at the thighs, belt loops, front button fastening, straight leg. Made in Italy. The model is 1.78 m wearing size M. The model is also styled with: Tibi turtleneck wool knit top, Karen Wazen Kaia oversized-frame sunglasses, ERL faux-fur single-breasted jacket, Yuzefi Bom tote bag, Off-White arrow earrings.',200,4),
 ('Ralph Lauren Kids Eldridge skinny-fit jeans','Polo Ralph Lauren is the master of all things smart-meets-casual. These Elridge jeans are the prime example, thanks to their comfortable stretch cotton blend and skinny-fit design. Composition: Cotton 92%, Elastane 8%. Washing instructions. Machine Wash', 100,4),
 ('Maison Margiela-Distressed straight-leg jeans','Maison Margiela may look relatively tame but they are anything but basic. A little baggy, they have a straight-leg shape and are slashed at the sides to reveal a little skin. Oo er. Featuring a button and zip fly, belt loops, a five pocket design, a distressed detail and a high rise.', 400,4),
 ('Valentino x Levi’s bootcut high-rise jeans','Combining denim excellence with Italian luxury, these Valentino x Levi’s high-rise jeans embody the best of the two brands. Designed with a flattering bootcut, the pair stands out in this collaboration. The model is 1.78 m wearing size 28 (in). The model is also styled with: Alexander McQueen oversized sole sneakers, Bottega Veneta The Triangle tonal-design tote bag.',500,4),
@@ -227,6 +226,6 @@ INSERT INTO Products VALUES
 ('Yugioh Official Cards','Yugioh Official Cards Prismatic Art Collection Booster Box. 3 Prismatic Secret Rares. 8 Ultra Rares / 12 Super Rares. 27 Normal Parallel Rares. Konami Genuine Korean version (100% Original Items).', 10,6),
 ('NBA Basketball Hit Collection Gift Box & Collecting Guide','PACK OF 100 BASKETBALL CARDS: Each of our basketball card collections contain 100 high-quality cards that are a blend of New and Vintage that any NBA fan would love to have! Our massive collection of Basketball Trading Cards spans many years of NBA history and contains some of the best players to play the game.',30,6),
 ('I Know Collection Affirmation Cards','THE POWER OF MANIFESTATION -- If you truly believe in the power of manifestation, the Dreamers affirmation cards by I Know Collection are the right way to start nurturing self-confidence, positivity, and courage, leaving behind everything that keeps you from reaching your goals.', 20, 6),
-('Hallmark All Occasion Handmade Boxed Set of Assorted Greeting Cards with Card Organizer ','Fun and festive boxed set contains everything you need to celebrate throughout the year: 24 greeting cards with coordinating envelopes and a storage box with dividers to keep cards neatly organized. Fun and festive boxed set contains everything you need to celebrate throughout the year: 24 greeting cards with coordinating envelopes and a storage box with dividers to keep cards neatly organized.', 25,6),
+('Hallmark All Occasion Handmade Boxed Set of Assorted Greeting Cards with Card Organizer ','Fun and festive boxed set contains everything you need to celebrate throughout the year: 24 greeting cards with coordinating envelopes and a storage box with dividers to keep cards neatly organized. Fun and festive boxed set contains everything you need to celebrate throughout the year: 24 greeting cards with coordinating envelopes and a storage box with dividers to keep cards neatly organized.', 25,6)
 
 
