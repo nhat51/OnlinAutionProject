@@ -3,6 +3,8 @@ function Input(){
     document.getElementById('lastname').removeAttribute('readonly');
     document.getElementById('email').removeAttribute('readonly');
     document.getElementById('telephone').removeAttribute('readonly');
+    document.getElementById('genderOption').removeAttribute('disabled');
+    document.getElementById('dob').removeAttribute('readonly');
     document.getElementById('saveButton').removeAttribute('hidden')
 
 }

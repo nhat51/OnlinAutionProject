@@ -24,6 +24,7 @@ namespace OnlineAuction.Areas.Identity.Pages.Account.Manage
         }
 
         public string Username { get; set; }
+       
 
         [TempData]
         public string StatusMessage { get; set; }
@@ -36,19 +37,38 @@ namespace OnlineAuction.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Gender { get; set; }
+            public string Email { get; set; }
+            public DateTime DateOfBirth { get; set; }
+
+
         }
 
         private async Task LoadAsync(OnlineAuctionUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-
+            var firstName =  user.First_Name;
+            var lastName = user.Last_Name;
+            var gender = user.Gender;
+            var email = user.Email;
+            var dob = user.Date_of_birth;
+            /*var email = await _userManager.GetEmailAsync
+*/
             Username = userName;
+
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
-            };
+                PhoneNumber = phoneNumber,
+                FirstName = firstName,
+                LastName = lastName,
+                Gender = gender,
+                Email = email,
+                DateOfBirth = dob
+             };
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -87,6 +107,7 @@ namespace OnlineAuction.Areas.Identity.Pages.Account.Manage
                     return RedirectToPage();
                 }
             }
+            
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

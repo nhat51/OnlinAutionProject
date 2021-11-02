@@ -9,17 +9,17 @@
     }
 }
 
-<h2>Manage your account</h2>
+
 
 <div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
-            <partial name="_ManageNav" />
-        </div>
-        <div class="col-md-9">
-            @RenderBody()
+    <div id="wrapper" class="wrapper-fluid banners-effect-7">
+        <div class="row">
+            <div class="col-sm-9">
+                @RenderBody()
+            </div>
+            <aside class="col-sm-3 hidden-xs content-aside col-md-3" id="column-right">
+                <partial name="_ManageNav" />
+            </aside>
         </div>
     </div>
 </div>

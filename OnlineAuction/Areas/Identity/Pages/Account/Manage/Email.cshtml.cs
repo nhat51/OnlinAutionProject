@@ -56,13 +56,13 @@ namespace OnlineAuction.Areas.Identity.Pages.Account.Manage
             Email = email;
 
             Input = new InputModel
-            {
+            { 
                 NewEmail = email,
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
         }
-
+         
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -78,6 +78,7 @@ namespace OnlineAuction.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnPostChangeEmailAsync()
         {
             var user = await _userManager.GetUserAsync(User);
+            
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
