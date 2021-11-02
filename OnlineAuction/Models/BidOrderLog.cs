@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace OnlineAuction.Models
 {
-    public class Product_image
+    public class BidOrderLog
     {
         public int ID { get; set; }
-        public string Image { get; set; }
-        public Product Product_ID { get; set; }
+        
+        public BidderBidRegist Bidder_Bid_Regist_ID { get; set; }
+
     }
 }

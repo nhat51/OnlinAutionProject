@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace OnlineAuction.Migrations
 {
-    public partial class InitCreate : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -92,8 +92,8 @@ namespace OnlineAuction.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Cat_Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Category_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Category_Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -239,7 +239,7 @@ namespace OnlineAuction.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Sub_Category_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CategoryID = table.Column<int>(type: "int", nullable: true)
+                    CategoryID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -249,7 +249,7 @@ namespace OnlineAuction.Migrations
                         column: x => x.CategoryID,
                         principalTable: "Product_Categories",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -289,17 +289,17 @@ namespace OnlineAuction.Migrations
                     Product_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Product_Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Actual_cost_in_curency = table.Column<int>(type: "int", nullable: false),
-                    Sub_CategoryID = table.Column<int>(type: "int", nullable: true)
+                    SubCategoryID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Products_Sub_category_Sub_CategoryID",
-                        column: x => x.Sub_CategoryID,
+                        name: "FK_Products_Sub_category_SubCategoryID",
+                        column: x => x.SubCategoryID,
                         principalTable: "Sub_category",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -328,17 +328,17 @@ namespace OnlineAuction.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Product_IDID = table.Column<int>(type: "int", nullable: true)
+                    ProductID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Prodcut_Images", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Prodcut_Images_Products_Product_IDID",
-                        column: x => x.Product_IDID,
+                        name: "FK_Prodcut_Images_Products_ProductID",
+                        column: x => x.ProductID,
                         principalTable: "Products",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -401,14 +401,14 @@ namespace OnlineAuction.Migrations
                 column: "Bidder_IDId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Prodcut_Images_Product_IDID",
+                name: "IX_Prodcut_Images_ProductID",
                 table: "Prodcut_Images",
-                column: "Product_IDID");
+                column: "ProductID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_Sub_CategoryID",
+                name: "IX_Products_SubCategoryID",
                 table: "Products",
-                column: "Sub_CategoryID");
+                column: "SubCategoryID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Sub_category_CategoryID",

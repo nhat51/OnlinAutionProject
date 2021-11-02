@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace OnlineAuction.Models
 {
-    public class Bidder_bid_regist
+    public class BidderBidRegist
     {
         public int ID { get; set; }
         public OnlineAuctionUser Bidder_ID { get; set; }
-        public Bid_order Bid_Order_ID { get; set; }
+        public BidOrder Bid_Order_ID { get; set; }
         public DateTime Regist_Date { get; set; }
         public bool IsActive { get; set; }
     }

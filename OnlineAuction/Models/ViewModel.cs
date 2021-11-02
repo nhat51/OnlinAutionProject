@@ -7,8 +7,8 @@ namespace OnlineAuction.Models
 {
     public class ViewModel
     {
-        public IEnumerable<Product_category> Categories { get; set; }
-        public IEnumerable<Sub_category> Sub_Categories { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
+        public IEnumerable<SubCategory> Sub_Categories { get; set; }
 
     }
 }

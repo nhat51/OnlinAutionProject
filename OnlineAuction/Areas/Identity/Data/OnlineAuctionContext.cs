@@ -17,14 +17,14 @@ namespace OnlineAuction.Data
         {
         }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Product_image> Prodcut_Images { get; set; }
-        public DbSet<Product_category> Product_Categories { get; set; }
-        public DbSet<Bidder_bid_regist> Bidder_Bid_Regists { get; set; }
-        public DbSet<Bid_order> Bid_Orders { get; set; }
-        public DbSet<Bid_order_log> Bid_Order_Logs { get; set; }
-        public DbSet<Bid_coin_pack> Bid_Coin_Packs { get; set; }
-        public DbSet<Bid_coin_trans_log> Bid_Coin_Trans_Logs { get; set; }
-        public DbSet<Sub_category> Sub_category { get; set; }
+        public DbSet<ProductImage> Prodcut_Images { get; set; }
+        public DbSet<Category> Product_Categories { get; set; }
+        public DbSet<BidderBidRegist> Bidder_Bid_Regists { get; set; }
+        public DbSet<BidOrder> Bid_Orders { get; set; }
+        public DbSet<BidOrderLog> Bid_Order_Logs { get; set; }
+        public DbSet<BidCoinPack> Bid_Coin_Packs { get; set; }
+        public DbSet<BidCoinTransLog> Bid_Coin_Trans_Logs { get; set; }
+        public DbSet<SubCategory> Sub_category { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

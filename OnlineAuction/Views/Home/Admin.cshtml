@@ -1,6 +1,95 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Administrator";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!-- Main Container  -->
+<div class="main-container container">
+    <ul class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Admin</a></li>
+
+    </ul>
+    <div class="row">
+        <!--Left Part Start -->
+        <aside class="col-md-3 col-sm-4 col-xs-12 content-aside left_column " id="column-left">
+            <div class="module blog-category titleLine">
+                <h3 class="modtitle">Admin Manage</h3>
+                <div class="modcontent">
+                    <ul class="list-group ">
+                        <li class="list-group-item"><a asp-controller="Categories" asp-action="Index" class="group-item">Category Manage</a></li>
+                        <li class="list-group-item"><a asp-controller="SubCategories" asp-action="Index" class="group-item active">Sub Category Manage</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <div class="col-sm-9">
+            <h2 class="title">Auctions</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <td class="text-center">Image</td>
+                            <td class="text-left">Item Name</td>
+                            <td class="text-right">Seller</td>
+                            <td class="text-right">Starting Price</td>
+                            <td class="text-right">Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <a href="product.html">
+                                    <img width="70px" src="image/catalog/demo/product/80/2.jpg" alt="Aspire Ultrabook Laptop" title="Aspire Ultrabook Laptop">
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="product.html">iPad</a>
+                            </td>
+                            <td class="text-right">Seller 1</td>
+                            <td class="text-right">
+                                <div class="price"> <span class="price-new">$45</span></div>
+
+                            </td>
+                            <td class="text-right">
+                                <button class="btn btn-primary"
+                                        title="" data-toggle="tooltip"
+                                        onclick=""
+                                        type="button" data-original-title="Access Auction">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                                <a class="btn btn-danger" title="" data-toggle="tooltip" href="" data-original-title="Remove"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="product.html"><img width="70px" src="image/catalog/demo/product/80/1.jpg" alt="Xitefun Causal Wear Fancy Shoes" title="Xitefun Causal Wear Fancy Shoes"></a>
+                            </td>
+                            <td class="text-left">
+                                <a href="product.html">Comas samer rumas</a>
+                            </td>
+                            <td class="text-right">Seller 2</td>
+                            <td class="text-right">
+                                <div class="price"> <span class="price-new">$85</span> </div>
+                            </td>
+                            <td class="text-right">
+                                <button class="btn btn-primary"
+                                        title="" data-toggle="tooltip"
+                                        onclick="" type="button"
+                                        data-original-title="Access Aution">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                                <a class="btn btn-danger" title="" data-toggle="tooltip"
+                                   href="" data-original-title="Remove">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Left Part End -->
+        </div>
+    </div>
+    <!-- //Main Container -->
+</div>

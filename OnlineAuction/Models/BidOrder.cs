@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineAuction.Models
 {
-    public class Bid_order
+    public class BidOrder
     {
         public int ID { get; set; }
         public int Product_ID { get; set; }

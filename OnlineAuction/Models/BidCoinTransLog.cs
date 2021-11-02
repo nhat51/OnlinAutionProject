@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OnlineAuction.Models
 {
-    public class Bid_coin_trans_log
+    public class BidCoinTransLog
     {
         public int ID { get; set; }
         public int Bid_Coin_Pack_ID { get; set; }
