@@ -52,6 +52,30 @@ namespace OnlineAuction.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
+            [StringLength(100)]
+            [DataType(DataType.Text)]
+            [Display(Name ="Firstname")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [StringLength(100)]
+            [DataType(DataType.Text)]
+            [Display(Name = "Lastname")]
+            public string LastName { get; set; }
+
+            [Required]
+            [StringLength(6)]
+            [DataType(DataType.Text)]
+            [Display(Name = "Gender")]
+            public string Gender { get; set; }
+
+
+            [Required]           
+            [DataType(DataType.Date)]
+            [Display(Name = "Date of birth")]
+            public DateTime DateOfBirth { get; set; }
+
+            [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -74,7 +98,13 @@ namespace OnlineAuction.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new OnlineAuctionUser { UserName = Input.Email, Email = Input.Email };
+                var user = new OnlineAuctionUser { 
+                    UserName = Input.Email, 
+                    Email = Input.Email, 
+                    First_Name = Input.FirstName,
+                    Last_Name = Input.LastName,
+                    Gender = Input.Gender,
+                    Date_of_birth = Input.DateOfBirth};
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

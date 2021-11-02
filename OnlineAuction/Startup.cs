@@ -63,10 +63,13 @@ namespace OnlineAuction
 
                 endpoints.MapGet("/TestSendMail", async (OnlineAuctionContext) =>
                 {
-                    var message = await MailUtils.MailUtils.SendMail("vuongpt93@gmail.com", "test", "test test test jhdsfkhf");
+                    var message = await MailUtils.MailUtils.SendMail("nhatvip512001@gmail.com", "test", "test test test jhdsfkhf");
 
                     await OnlineAuctionContext.Response.WriteAsync(message);
-                });
+
+                })
+                .RequireAuthorization();
+
             });
         }
     }
