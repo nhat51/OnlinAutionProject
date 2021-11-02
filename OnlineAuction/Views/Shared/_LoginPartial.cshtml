@@ -17,6 +17,15 @@
             <div class="row">
                 <div class="col-md">
                     <ul class="row-list">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a class="subcategory_item "
+                                   asp-controller="Home" asp-action="Admin">
+                                    <i class="fa fa-user-circle "></i>Admin Actions
+                                </a>
+                            </li>                           
+                        }
                         <li>
                             <a class="subcategory_item"
                                href="sitemap.html">

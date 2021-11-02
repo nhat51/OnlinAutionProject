@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineAuction.Models;
 using System;
@@ -22,8 +23,8 @@ namespace OnlineAuction.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [Authorize(Roles = "Admin")]
+        public IActionResult Admin()
         {
             return View();
         }
