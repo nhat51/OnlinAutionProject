@@ -107,7 +107,11 @@ namespace OnlineAuction.Areas.Identity.Pages.Account.Manage
                     return RedirectToPage();
                 }
             }
-            
+            user.First_Name = Input.FirstName;
+            user.Last_Name = Input.LastName;
+            user.Email = Input.Email;
+            user.Date_of_birth = Input.DateOfBirth;
+            await _userManager.UpdateAsync(user);
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

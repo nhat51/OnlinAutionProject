@@ -11,7 +11,7 @@
 <partial name="_StatusMessage" model="Model.StatusMessage" />
 <h2 class="title">My Account</h2>
 <p class="lead">Hello</p>
-<form class="submit">
+<form class="submit" method="post">
     <div class="row">
         <div class="col-sm-12">
             <fieldset id="personal-details">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label" >Telephone</label>
-                        <input class="form-control nhatclass" id="telephone" value="01234567" readonly>
+                        <input class="form-control nhatclass" id="telephone" asp-for="Input.PhoneNumber" readonly>
                     </div>
                     <div class="form-group ">
                         <label class="control-label" for="email">E-mail</label>
