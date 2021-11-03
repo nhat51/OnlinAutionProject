@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,7 +16,7 @@ using OnlineAuction.Areas.Identity.Data;
 namespace OnlineAuction.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
-    public class LoginModel : PageModel
+    public class  LoginModel : PageModel
     {
         private readonly UserManager<OnlineAuctionUser> _userManager;
         private readonly SignInManager<OnlineAuctionUser> _signInManager;
