@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using OnlineAuction.Data;
 using OnlineAuction.Models;
 using System;
 using System.Collections.Generic;
@@ -13,15 +16,19 @@ namespace OnlineAuction.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly OnlineAuctionContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,OnlineAuctionContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            ViewData["Category"] = new SelectList(_context.Categories, "ID", "Category_Name");
+            var onlineAuctonContext = _context.Categories.Include(c => c.Sub_Categories);
+            return View(onlineAuctonContext.ToList());
         }
         [Authorize(Roles = "Admin")]
         public IActionResult Admin()
