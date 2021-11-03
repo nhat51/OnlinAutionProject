@@ -1,23 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OnlineAuction.Data;
 using OnlineAuction.Models;
+using OnlineAuction.ViewModels;
 
 namespace OnlineAuction.Controllers
 {
     public class CategoriesController : Controller
     {
         private readonly OnlineAuctionContext _context;
+        private IWebHostEnvironment webHostEnvironment;
 
-        public CategoriesController(OnlineAuctionContext context)
+        public CategoriesController(IWebHostEnvironment webHostEnvironment, OnlineAuctionContext context)
         {
+            this.webHostEnvironment = webHostEnvironment;
             _context = context;
         }
+
+        
 
         // GET: Categories
         public async Task<IActionResult> Index()
@@ -54,15 +62,41 @@ namespace OnlineAuction.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Category_Name,Category_Image")] Category category)
+        public async Task<IActionResult> Create(CreateCategoryViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                var model = new Category()
+                {
+                    Category_Name = vm.Category_Name
+                };
+                foreach (var item in vm.Category_Image)
+                {
+                    model.Category_Image = UploadImage(item);
+                        
+                }
+                
+                _context.Categories.Add(model);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(vm);
+        }
+
+        private string UploadImage(IFormFile item)
+        {
+            string fileName = null;
+            if (item != null)
+            {
+                string uploadDir = Path.Combine(webHostEnvironment.WebRootPath, "image/Category");
+                fileName = Guid.NewGuid().ToString() + "-" + item.FileName;
+                string filePath = Path.Combine(uploadDir, fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    item.CopyTo(fileStream);
+                }
+            }
+            return fileName;
         }
 
         // GET: Categories/Edit/5

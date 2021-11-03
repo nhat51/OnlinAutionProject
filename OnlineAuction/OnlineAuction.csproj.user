@@ -19,6 +19,7 @@
     <WebStackScaffolding_DbContextTypeFullName>OnlineAuction.Data.OnlineAuctionContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <NameOfLastUsedPublishProfile>E:\eProject-Sem3\OnlineAuction\OnlineAuction\Properties\PublishProfiles\OnlineAuction20211101061040 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

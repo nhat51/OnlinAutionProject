@@ -56,7 +56,7 @@
                                     <a asp-action="Details" asp-route-id="@item.ID" data-toggle="tooltip" data-original-title="Detail"> @Html.DisplayFor(modelItem => item.Category_Name)</a>
                                 </td>
                                 <td class="text-center">
-                                    <img class="img-thumbnail" src="~/image/catalog/demo/category/@Html.DisplayFor(modelItem => item.Category_Image)" alt="@Html.DisplayFor(modelItem => item.Category_Name)_Images" />
+                                    <img class="img-thumbnail" src="~/image/category/@Html.DisplayFor(modelItem => item.Category_Image)" alt="@Html.DisplayFor(modelItem => item.Category_Name)_Images" />
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ID" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>

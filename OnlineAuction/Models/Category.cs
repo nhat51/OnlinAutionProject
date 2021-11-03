@@ -10,10 +10,7 @@ namespace OnlineAuction.Models
     {
         [Key]
         public int ID { get; set; }
-
-        
         public string Category_Name { get; set; }
-
         public string Category_Image { get; set; }
         public ICollection<SubCategory> Sub_Categories { get; set; }
     }
