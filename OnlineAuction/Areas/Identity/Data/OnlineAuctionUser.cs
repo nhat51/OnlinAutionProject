@@ -34,7 +34,7 @@ namespace OnlineAuction.Areas.Identity.Data
 
         public int Current_bid_coins { get; set; }
         public int Locked_bid_coins { get; set; }
-        public List<BidOrder> BidOrders { get; set; }
-        public List<BidderBidRegist> BidderBidRegists { get; set; }
+        public ICollection<BidOrder> BidOrders { get; set; }
+        public ICollection<BidderBidRegist> BidderBidRegists { get; set; }
     }
 }

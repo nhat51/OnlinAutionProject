@@ -10,7 +10,7 @@ using OnlineAuction.Data;
 namespace OnlineAuction.Migrations
 {
     [DbContext(typeof(OnlineAuctionContext))]
-    [Migration("20211103090938_init")]
+    [Migration("20211103095141_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
