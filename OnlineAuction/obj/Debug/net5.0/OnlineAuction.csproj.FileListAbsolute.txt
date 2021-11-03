@@ -598,3 +598,4 @@ E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\SubCat
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\SubCategories\Details.cshtml.g.cs
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\SubCategories\Edit.cshtml.g.cs
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\SubCategories\Index.cshtml.g.cs
+E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\OnlineAuction.csproj.AssemblyReference.cache

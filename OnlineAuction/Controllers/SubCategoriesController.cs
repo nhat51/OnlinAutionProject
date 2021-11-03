@@ -118,7 +118,7 @@ namespace OnlineAuction.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryID"] = new SelectList(_context.Categories, "ID", "ID", subCategory.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Categories, "ID", "Category_Name", subCategory.CategoryID);
             return View(subCategory);
         }
 
