@@ -22,7 +22,7 @@ namespace OnlineAuction.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Product_Categories.ToListAsync());
+            return View(await _context.Categories.ToListAsync());
         }
 
         // GET: Categories/Details/5
@@ -33,7 +33,7 @@ namespace OnlineAuction.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Product_Categories
+            var category = await _context.Categories
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (category == null)
             {
@@ -73,7 +73,7 @@ namespace OnlineAuction.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Product_Categories.FindAsync(id);
+            var category = await _context.Categories.FindAsync(id);
             if (category == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace OnlineAuction.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Product_Categories
+            var category = await _context.Categories
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (category == null)
             {
@@ -139,15 +139,15 @@ namespace OnlineAuction.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Product_Categories.FindAsync(id);
-            _context.Product_Categories.Remove(category);
+            var category = await _context.Categories.FindAsync(id);
+            _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CategoryExists(int id)
         {
-            return _context.Product_Categories.Any(e => e.ID == id);
+            return _context.Categories.Any(e => e.ID == id);
         }
     }
 }

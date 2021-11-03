@@ -22,7 +22,7 @@ namespace OnlineAuction.Controllers
         // GET: SubCategories
         public async Task<IActionResult> Index()
         {
-            var onlineAuctionContext = _context.Sub_category.Include(s => s.Category);
+            var onlineAuctionContext = _context.SubCategories.Include(s => s.Category);
             return View(await onlineAuctionContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace OnlineAuction.Controllers
                 return NotFound();
             }
 
-            var subCategory = await _context.Sub_category
+            var subCategory = await _context.SubCategories
                 .Include(s => s.Category)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (subCategory == null)
@@ -48,7 +48,7 @@ namespace OnlineAuction.Controllers
         // GET: SubCategories/Create
         public IActionResult Create()
         {
-            ViewData["CategoryID"] = new SelectList(_context.Product_Categories, "ID", "Category_Name");
+            ViewData["CategoryID"] = new SelectList(_context.Categories, "ID", "Category_Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace OnlineAuction.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryID"] = new SelectList(_context.Product_Categories, "ID", "ID", subCategory.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Categories, "ID", "ID", subCategory.CategoryID);
             return View(subCategory);
         }
 
@@ -77,12 +77,12 @@ namespace OnlineAuction.Controllers
                 return NotFound();
             }
 
-            var subCategory = await _context.Sub_category.FindAsync(id);
+            var subCategory = await _context.SubCategories.FindAsync(id);
             if (subCategory == null)
             {
                 return NotFound();
             }
-            ViewData["CategoryID"] = new SelectList(_context.Product_Categories, "ID", "ID", subCategory.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Categories, "ID", "ID", subCategory.CategoryID);
             return View(subCategory);
         }
 
@@ -118,7 +118,7 @@ namespace OnlineAuction.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryID"] = new SelectList(_context.Product_Categories, "ID", "ID", subCategory.CategoryID);
+            ViewData["CategoryID"] = new SelectList(_context.Categories, "ID", "ID", subCategory.CategoryID);
             return View(subCategory);
         }
 
@@ -130,7 +130,7 @@ namespace OnlineAuction.Controllers
                 return NotFound();
             }
 
-            var subCategory = await _context.Sub_category
+            var subCategory = await _context.SubCategories
                 .Include(s => s.Category)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (subCategory == null)
@@ -146,15 +146,15 @@ namespace OnlineAuction.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var subCategory = await _context.Sub_category.FindAsync(id);
-            _context.Sub_category.Remove(subCategory);
+            var subCategory = await _context.SubCategories.FindAsync(id);
+            _context.SubCategories.Remove(subCategory);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SubCategoryExists(int id)
         {
-            return _context.Sub_category.Any(e => e.ID == id);
+            return _context.SubCategories.Any(e => e.ID == id);
         }
     }
 }

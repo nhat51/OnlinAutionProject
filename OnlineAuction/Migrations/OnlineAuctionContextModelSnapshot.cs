@@ -261,7 +261,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Bid_Coin_Packs");
+                    b.ToTable("BidCoinPacks");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.BidCoinTransLog", b =>
@@ -288,7 +288,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Bid_Coin_Trans_Logs");
+                    b.ToTable("BidCoinTransLogs");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.BidOrder", b =>
@@ -326,7 +326,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasIndex("BidderId");
 
-                    b.ToTable("Bid_Orders");
+                    b.ToTable("BidOrders");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.BidOrderLog", b =>
@@ -343,7 +343,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasIndex("Bidder_Bid_Regist_IDID");
 
-                    b.ToTable("Bid_Order_Logs");
+                    b.ToTable("BidOrderLogs");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.BidderBidRegist", b =>
@@ -371,7 +371,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasIndex("Bidder_IDId");
 
-                    b.ToTable("Bidder_Bid_Regists");
+                    b.ToTable("BidderBidRegists");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.Category", b =>
@@ -389,7 +389,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Product_Categories");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.Product", b =>
@@ -436,7 +436,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("Prodcut_Images");
+                    b.ToTable("ProdcutImages");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.SubCategory", b =>
@@ -456,7 +456,7 @@ namespace OnlineAuction.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Sub_category");
+                    b.ToTable("SubCategories");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -513,7 +513,7 @@ namespace OnlineAuction.Migrations
             modelBuilder.Entity("OnlineAuction.Models.BidOrder", b =>
                 {
                     b.HasOne("OnlineAuction.Areas.Identity.Data.OnlineAuctionUser", "Bidder")
-                        .WithMany("Bid_Orders")
+                        .WithMany("BidOrders")
                         .HasForeignKey("BidderId");
 
                     b.Navigation("Bidder");
@@ -535,7 +535,7 @@ namespace OnlineAuction.Migrations
                         .HasForeignKey("Bid_Order_IDID");
 
                     b.HasOne("OnlineAuction.Areas.Identity.Data.OnlineAuctionUser", "Bidder_ID")
-                        .WithMany("Bidder_Bid_Regists")
+                        .WithMany("BidderBidRegists")
                         .HasForeignKey("Bidder_IDId");
 
                     b.Navigation("Bid_Order_ID");
@@ -578,9 +578,9 @@ namespace OnlineAuction.Migrations
 
             modelBuilder.Entity("OnlineAuction.Areas.Identity.Data.OnlineAuctionUser", b =>
                 {
-                    b.Navigation("Bid_Orders");
+                    b.Navigation("BidderBidRegists");
 
-                    b.Navigation("Bidder_Bid_Regists");
+                    b.Navigation("BidOrders");
                 });
 
             modelBuilder.Entity("OnlineAuction.Models.Category", b =>

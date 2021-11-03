@@ -588,7 +588,6 @@ E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\OnlineAuction.dll
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\ref\OnlineAuction.dll
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\OnlineAuction.pdb
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\OnlineAuction.genruntimeconfig.cache
-E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\OnlineAuction.csproj.AssemblyReference.cache
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\Categories\Create.cshtml.g.cs
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\Categories\Delete.cshtml.g.cs
 E:\eProject-Sem3\OnlineAuction\OnlineAuction\obj\Debug\net5.0\Razor\Views\Categories\Details.cshtml.g.cs

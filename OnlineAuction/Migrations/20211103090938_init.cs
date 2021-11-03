@@ -54,7 +54,7 @@ namespace OnlineAuction.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Bid_Coin_Packs",
+                name: "BidCoinPacks",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -66,11 +66,11 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bid_Coin_Packs", x => x.ID);
+                    table.PrimaryKey("PK_BidCoinPacks", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Bid_Coin_Trans_Logs",
+                name: "BidCoinTransLogs",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -83,11 +83,11 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bid_Coin_Trans_Logs", x => x.ID);
+                    table.PrimaryKey("PK_BidCoinTransLogs", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Product_Categories",
+                name: "Categories",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -97,7 +97,7 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Product_Categories", x => x.ID);
+                    table.PrimaryKey("PK_Categories", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -207,7 +207,7 @@ namespace OnlineAuction.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Bid_Orders",
+                name: "BidOrders",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -223,9 +223,9 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bid_Orders", x => x.ID);
+                    table.PrimaryKey("PK_BidOrders", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Bid_Orders_AspNetUsers_BidderId",
+                        name: "FK_BidOrders_AspNetUsers_BidderId",
                         column: x => x.BidderId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -233,7 +233,7 @@ namespace OnlineAuction.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sub_category",
+                name: "SubCategories",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -243,17 +243,17 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Sub_category", x => x.ID);
+                    table.PrimaryKey("PK_SubCategories", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Sub_category_Product_Categories_CategoryID",
+                        name: "FK_SubCategories_Categories_CategoryID",
                         column: x => x.CategoryID,
-                        principalTable: "Product_Categories",
+                        principalTable: "Categories",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Bidder_Bid_Regists",
+                name: "BidderBidRegists",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -265,17 +265,17 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bidder_Bid_Regists", x => x.ID);
+                    table.PrimaryKey("PK_BidderBidRegists", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Bidder_Bid_Regists_AspNetUsers_Bidder_IDId",
+                        name: "FK_BidderBidRegists_AspNetUsers_Bidder_IDId",
                         column: x => x.Bidder_IDId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Bidder_Bid_Regists_Bid_Orders_Bid_Order_IDID",
+                        name: "FK_BidderBidRegists_BidOrders_Bid_Order_IDID",
                         column: x => x.Bid_Order_IDID,
-                        principalTable: "Bid_Orders",
+                        principalTable: "BidOrders",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -295,15 +295,15 @@ namespace OnlineAuction.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Products_Sub_category_SubCategoryID",
+                        name: "FK_Products_SubCategories_SubCategoryID",
                         column: x => x.SubCategoryID,
-                        principalTable: "Sub_category",
+                        principalTable: "SubCategories",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Bid_Order_Logs",
+                name: "BidOrderLogs",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -312,17 +312,17 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bid_Order_Logs", x => x.ID);
+                    table.PrimaryKey("PK_BidOrderLogs", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Bid_Order_Logs_Bidder_Bid_Regists_Bidder_Bid_Regist_IDID",
+                        name: "FK_BidOrderLogs_BidderBidRegists_Bidder_Bid_Regist_IDID",
                         column: x => x.Bidder_Bid_Regist_IDID,
-                        principalTable: "Bidder_Bid_Regists",
+                        principalTable: "BidderBidRegists",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Prodcut_Images",
+                name: "ProdcutImages",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -332,9 +332,9 @@ namespace OnlineAuction.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Prodcut_Images", x => x.ID);
+                    table.PrimaryKey("PK_ProdcutImages", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Prodcut_Images_Products_ProductID",
+                        name: "FK_ProdcutImages_Products_ProductID",
                         column: x => x.ProductID,
                         principalTable: "Products",
                         principalColumn: "ID",
@@ -381,28 +381,28 @@ namespace OnlineAuction.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bid_Order_Logs_Bidder_Bid_Regist_IDID",
-                table: "Bid_Order_Logs",
-                column: "Bidder_Bid_Regist_IDID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Bid_Orders_BidderId",
-                table: "Bid_Orders",
-                column: "BidderId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Bidder_Bid_Regists_Bid_Order_IDID",
-                table: "Bidder_Bid_Regists",
+                name: "IX_BidderBidRegists_Bid_Order_IDID",
+                table: "BidderBidRegists",
                 column: "Bid_Order_IDID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Bidder_Bid_Regists_Bidder_IDId",
-                table: "Bidder_Bid_Regists",
+                name: "IX_BidderBidRegists_Bidder_IDId",
+                table: "BidderBidRegists",
                 column: "Bidder_IDId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Prodcut_Images_ProductID",
-                table: "Prodcut_Images",
+                name: "IX_BidOrderLogs_Bidder_Bid_Regist_IDID",
+                table: "BidOrderLogs",
+                column: "Bidder_Bid_Regist_IDID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BidOrders_BidderId",
+                table: "BidOrders",
+                column: "BidderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProdcutImages_ProductID",
+                table: "ProdcutImages",
                 column: "ProductID");
 
             migrationBuilder.CreateIndex(
@@ -411,8 +411,8 @@ namespace OnlineAuction.Migrations
                 column: "SubCategoryID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Sub_category_CategoryID",
-                table: "Sub_category",
+                name: "IX_SubCategories_CategoryID",
+                table: "SubCategories",
                 column: "CategoryID");
         }
 
@@ -434,37 +434,37 @@ namespace OnlineAuction.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Bid_Coin_Packs");
+                name: "BidCoinPacks");
 
             migrationBuilder.DropTable(
-                name: "Bid_Coin_Trans_Logs");
+                name: "BidCoinTransLogs");
 
             migrationBuilder.DropTable(
-                name: "Bid_Order_Logs");
+                name: "BidOrderLogs");
 
             migrationBuilder.DropTable(
-                name: "Prodcut_Images");
+                name: "ProdcutImages");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Bidder_Bid_Regists");
+                name: "BidderBidRegists");
 
             migrationBuilder.DropTable(
                 name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Bid_Orders");
+                name: "BidOrders");
 
             migrationBuilder.DropTable(
-                name: "Sub_category");
+                name: "SubCategories");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Product_Categories");
+                name: "Categories");
         }
     }
 }
