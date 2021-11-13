@@ -1,0 +1,67 @@
+﻿@model OnlineAuction.Models.BidOrder
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BidOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product_ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bid_Start_Time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bid_Start_Time)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bid_End_Time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bid_End_Time)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bid_Chair_Cost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bid_Chair_Cost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Base_Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Base_Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Increment_Price_Per_Bid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Increment_Price_Per_Bid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cool_Down_Time_Per_Bid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cool_Down_Time_Per_Bid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

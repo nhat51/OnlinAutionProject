@@ -195,47 +195,13 @@
                                                             <p class="close-menu"></p>
                                                             <a href="#" class="clearfix">
                                                                 <strong>Categories</strong>
-                                                                <img class="label-hot" src="~/image/catalog/menu/hot-icon.png"
-                                                                     alt="icon items">
 
                                                                 <b class="caret"></b>
                                                             </a>
-                                                            <div class="sub-menu" style="width: 100%; display: none;">
-                                                                <div class="content">                                                                  
-                                                                    <div class="row">
-                                                                        @foreach (var category in Model)
-                                                                        {
-                                                                            <div class="col-md-3">
-                                                                                <a href="#"  class="title-submenu">@category.Category_Name</a>
-                                                                                <div class="row">
-                                                                                    <div class="col-md-12 hover-menu">
-                                                                                        <div class="menu">
-                                                                                            <ul>
-                                                                                                @foreach (var sub_category in category.Sub_Categories)
-                                                                                                {
-                                                                                                    <li>
-                                                                                                        <a href="#"
-                                                                                                           class="main-menu">
-                                                                                                            @sub_category.Sub_Category_Name
-                                                                                                        </a>
-                                                                                                    </li>
-                                                                                                }
-
-
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        }
-
-
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            @await Component.InvokeAsync("Category", new { numberCategory = 2 })
+                                                           
                                                         </li>
-                                                        <li class="">
+                                                        <li class="">   
                                                             <p class="close-menu"></p>
                                                             <a href="#" class="clearfix">
                                                                 <strong>Accessories</strong>

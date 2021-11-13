@@ -445,6 +445,7 @@ $(document).ready(function(){
 
 $(function() {
 	$('.clock').each(function (){
+		var $currentDate = Date.now();
 		var $this = $(this), finalDate = $(this).data('countdown');
 		$this.countdown(finalDate, function(event) {
 			$(this).html(event.strftime(''

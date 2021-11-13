@@ -1,0 +1,36 @@
+﻿@model IEnumerable<OnlineAuction.Models.Category>
+
+<div class="sub-menu" style="width: 100%; display: none;">
+    <div class="content">
+        <div class="row">
+          @foreach (var category in Model)
+          {
+            <div class="col-md-3">
+                <a href="category.html">
+                    <img src="image/Category/@category.Category_Image"
+                         alt="banner4">
+                </a>
+                <a href="category.html" class="title-submenu">@category.Category_Name</a>
+                <div class="row">
+                    <div class="col-md-12 hover-menu">
+                        <div class="menu">
+                            <ul>
+                               
+                                    <li>
+                                        <a href="category.html "
+                                           class="main-menu">
+                                           sub category name
+                                        </a>
+                                    </li>
+                                
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          }
+        </div>
+    </div>
+</div>

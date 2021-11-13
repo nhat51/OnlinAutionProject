@@ -1,0 +1,177 @@
+﻿@model IEnumerable<OnlineAuction.Models.BidOrder>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+
+
+<div class="row">
+    <!--Middle Part Start-->
+    <div class="col-sm-10">
+        <div class="producttab">
+            <a asp-action="Create">Create New</a>
+            <div class="tabsslider  vertical-tabs col-xs-12">
+                <ul class="nav nav-tabs col-lg-2 col-sm-3">
+                    <li class="active"><a data-toggle="tab" href="#tab-1">Your Product</a></li>
+                    <li class="item_nonactive"><a data-toggle="tab" href="#tab-5">Auction History</a></li>
+                </ul>
+                <div class="tab-content col-lg-10 col-sm-9 col-xs-12">
+                    <div id="tab-1" class="tab-pane fade active in">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <td class="text-center">Product Name</td>
+                                    <td class="text-center">Category</td>
+                                    <td class="text-center">Starting price</td>
+                                    <td class="text-center">Curren Bid</td>
+                                    <td class="text-center">End on</td>
+                                    <td class="text-center">Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">product 1</td>
+                                    <td class="text-center">Category1</td>
+                                    <td class="text-center">500$</td>
+                                    <td class="text-center">900$</td>
+                                    <td class="text-center">
+                                        2021/12/14
+                                    </td>
+                                    <td class="text-center">In Auction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">product 2</td>
+                                    <td class="text-center">Category2</td>
+                                    <td class="text-center">500$</td>
+                                    <td class="text-center">900$</td>
+                                    <td class="text-center">
+                                        2021/10/14
+                                    </td>
+                                    <td class="text-center">Ended</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">product 3</td>
+                                    <td class="text-center">Category3</td>
+                                    <td class="text-center">500$</td>
+                                    <td class="text-center">900$</td>
+                                    <td class="text-center">
+                                        2021/12/14
+                                    </td>
+                                    <td class="text-center">Waiting</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="tab-5" class="tab-pane fade">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <td class="text-center">Name</td>
+                                    <td class="text-center">Image</td>
+                                    <td class="text-center">Your Bid</td>
+                                    <td class="text-center">Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        Product Name 1
+                                    </td>
+                                    <td class="text-center">Product Image</td>
+                                    <td class="text-center">$500</td>
+                                    <td class="text-center"><div class="alert-info">Won</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        Product Name 2
+                                    </td>
+                                    <td class="text-center">Product Image</td>
+                                    <td class="text-center">$500</td>
+                                    <td class="text-center"><div class="alert-danger">Lose</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bid_Start_Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bid_End_Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bid_Chair_Cost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Base_Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Increment_Price_Per_Bid)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cool_Down_Time_Per_Bid)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bid_Start_Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bid_End_Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bid_Chair_Cost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Base_Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Increment_Price_Per_Bid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cool_Down_Time_Per_Bid)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@

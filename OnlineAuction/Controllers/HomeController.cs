@@ -27,8 +27,9 @@ namespace OnlineAuction.Controllers
         public IActionResult Index()
         {
             ViewData["Category"] = new SelectList(_context.Categories, "ID", "Category_Name");
-            var onlineAuctonContext = _context.Categories.Include(c => c.Sub_Categories);
-            return View(onlineAuctonContext.ToList());
+            
+            
+            return View();
         }
         [Authorize(Roles = "Admin")]
         public IActionResult Admin()
@@ -40,6 +41,22 @@ namespace OnlineAuction.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public List<Category> GetCategories()
+        {
+            List<Category> category = _context.Categories.ToList();
+            
+            foreach (var item in category)
+            {
+                item.Sub_Categories = GetCategories(item.ID).ToList();
+            }
+            return category;
+        }
+        public List<SubCategory> GetCategories(int ID)
+        {
+            List<SubCategory> subccategory = _context.SubCategories.Where(s => s.ID.Equals(ID)).ToList();
+
+            return subccategory;
         }
     }
 }
