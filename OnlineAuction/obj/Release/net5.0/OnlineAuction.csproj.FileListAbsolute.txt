@@ -412,9 +412,9 @@ D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Onlin
 D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\ref\OnlineAuction.dll
 D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\OnlineAuction.pdb
 D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\OnlineAuction.genruntimeconfig.cache
-D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\BidOrders\Create.cshtml.g.cs
-D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\BidOrders\Delete.cshtml.g.cs
-D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\BidOrders\Details.cshtml.g.cs
-D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\BidOrders\Edit.cshtml.g.cs
-D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\BidOrders\Index.cshtml.g.cs
 D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\Shared\Components\Category\Default.cshtml.g.cs
+D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\Auctions\Create.cshtml.g.cs
+D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\Auctions\Delete.cshtml.g.cs
+D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\Auctions\Details.cshtml.g.cs
+D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\Auctions\Edit.cshtml.g.cs
+D:\Aptech\Kì3\Project\OnlinAutionProject\OnlineAuction\obj\Release\net5.0\Razor\Views\Auctions\Index.cshtml.g.cs

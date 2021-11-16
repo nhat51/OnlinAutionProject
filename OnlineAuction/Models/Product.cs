@@ -10,21 +10,11 @@ namespace OnlineAuction.Models
     {
         [Key]
         public int ID { get; set; }
-
         [Required]
         public string Product_Name { get; set; }
-
-
         public string Product_Description { get; set; }
-
-        [Required]
-        public int Actual_cost_in_curency { get; set; }
-
         public int SubCategoryID { get; set; }
-
-        public SubCategory Sub_Category { get; set; }
-
-
+        public SubCategory Sub_Category { get; set; }  
         public ICollection<ProductImage> Prodcut_Images { get; set; }
     }
 }

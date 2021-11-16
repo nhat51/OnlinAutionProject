@@ -10,6 +10,6 @@ namespace OnlineAuction.Models
         public int ID { get; set; }
         public string Image { get; set; }
         public int ProductID { get; set; }
-        public Product Product_ID { get; set; }
+        public Auction Auction { get; set; }
     }
 }

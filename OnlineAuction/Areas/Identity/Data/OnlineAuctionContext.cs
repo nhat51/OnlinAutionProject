@@ -19,11 +19,10 @@ namespace OnlineAuction.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProdcutImages { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<BidderBidRegist> BidderBidRegists { get; set; }
-        public DbSet<BidOrder> BidOrders { get; set; }
-        public DbSet<BidOrderLog> BidOrderLogs { get; set; }
-        public DbSet<BidCoinPack> BidCoinPacks { get; set; }
-        public DbSet<BidCoinTransLog> BidCoinTransLogs { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Auction> Auctions { get; set; }
+        public DbSet<AuctionDetail> AuctionDetails { get; set; }      
         public DbSet<SubCategory> SubCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

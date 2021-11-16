@@ -25,16 +25,11 @@ namespace OnlineAuction.Views.Component
         }
         private Task<List<Category>> GetItemsAsync(int numberCategory)
         {
-            var categories = _db.Categories.Where(c => c.ID <= numberCategory).ToListAsync();
-            
+            var categories = _db.Categories.Where(c => c.ID <= numberCategory).Include(s =>s.Sub_Categories).ToListAsync();
+           
             return categories;
         }
 
-        private List<SubCategory> GetCategories(int ID)
-        {
-            List<SubCategory> subccategory = _db.SubCategories.Where(s => s.ID.Equals(ID)).ToList();
-
-            return subccategory;
-        }
+        
     } 
 }

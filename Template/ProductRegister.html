@@ -342,91 +342,23 @@
     </ul>
     <div class="row">
         <div id="content" class="col-sm-12">
-            <h2 class="title">Thông tin cơ bản</h2>
             <form action="" method="post" enctype="multipart/form-data" class="form-horizontal account-register clearfix">
-                <fieldset id="account">
-                    <legend>Personal Details</legend>
-                    <div class="form-group required" style="display: none;">
-                        <label class="col-sm-2 control-label">Customer Group</label>
-                        <div class="col-sm-10">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="customer_group_id" value="1" checked="checked"> Default
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-firstname">Tên sản phẩm</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="nhập vào" value="" placeholder="Nhập vào" id="input-firstname" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-lastname">Mô tả sản phẩm</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="nhập vào" value="" placeholder="Nhập vào"  id="input-lastname" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-email">E-Mail</label>
-                        <div class="col-sm-10">
-                            <input type="email" name="nhập vào" value="" placeholder="Nhập vào" id="input-email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-telephone">Số điện thoại</label>
-                        <div class="col-sm-10">
-                            <input type="tel" name="nhập vào" value="" placeholder="Nhập vào" id="input-telephone" class="form-control">
-                        </div>
-                    </div>
-                </fieldset>
+
                 <fieldset id="address">
-                    <legend>Địa chỉ </legend>
+                    <legend>Product Detail </legend>
                     <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-address-1">Address</label>
+                        <label class="col-sm-2 control-label" for="input-address-1">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="address_1" value="" placeholder="Address" id="input-address-1" class="form-control">
+                            <input type="text" name="address_1" value="" placeholder="Name" id="input-address-1" class="form-control">
                         </div>
                     </div>
                     <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-city">City</label>
+                        <label class="col-sm-2 control-label" for="">Category</label>
                         <div class="col-sm-10">
-                            <select name="city_id" id="input-city" class="form-control">
+                            <select name="city_id"  class="form-control">
                                 <option value=""> --- Please Select --- </option>
-                                <option value="1">An Giang</option>
-                                <option value="2">Bắc Cạn</option>
-                                <option value="3">Bắc Ninh</option>
-                                <option value="4">Bắc Giang</option>
-                                <option value="5">Bến Tre</option>
-                                <option value="6">Bà Rịa-Vũng Tàu</option>
-                                <option value="7">Bình Dương</option>
-                                <option value="8">Bình Phước</option>
-                                <option value="9">Cần Thơ</option>
-                                <option value="10">Cao Bằng</option>
-                                <option value="11">Cà Mau</option>
-                                <option value="12">Hà Giang</option>
-                                <option value="13">Hà Nam</option>
-                                <option value="14">Hà Nội</option>
-                                <option value="15">Hà Tĩnh</option>
-                                <option value="16">Hải Phòng</option>
-                                <option value="17">Hải Dương</option>
-                                <option value="18">Hưng Yên</option>
-                                <option value="19">Khánh Hòa</option>
-                                <option value="20">Kiên Giang</option>
-                                <option value="22">Kon Tum</option>
-                                <option value="23">Lạng Sơn</option>
-                                <option value="24">Lai Châu</option>
-                                <option value="25">Lào Cai</option>
-                                <option value="26">Long An</option>
-                                <option value="27">Nam Định</option>
-                                <option value="28">Nghệ An</option>
-                                <option value="29">Ninh Bình</option>
-                                <option value="30">Ninh Thuận</option>
-                                <option value="31">Phú Thọ</option>
                                 <option value="32">Quảng Bình</option>
                                 <option value="33">Quảng Trị</option>
-                                <option value="34">Quảng Ngãi</option>                                <option value="33">Quảng Trị</option>
                                 <option value="35">Thái Bình</option>
                                 <option value="36">Thái Nguyên</option>
                                 <option value="37">Thanh Hóa</option>
@@ -437,68 +369,57 @@
                         </div>
                     </div>
                     <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-address-1">Detailed Address</label>
+                        <label class="col-sm-2 control-label" for="">Sub Category</label>
                         <div class="col-sm-10">
-                            <input type="text" name="address_1" value="" placeholder="Số nhà,tên đường,v.v..." class="form-control">
+                            <select name="city_id" id="" class="form-control">
+                                <option value=""> --- Please Select --- </option>
+                                <option value="32">Quảng Bình</option>
+                                <option value="33">Quảng Trị</option>
+                                <option value="35">Thái Bình</option>
+                                <option value="36">Thái Nguyên</option>
+                                <option value="37">Thanh Hóa</option>
+                                <option value="38">Thừa Thiên Huế</option>
+                                <option value="39">TP Hồ Chí Minh</option>
+                                <option value="40">Vĩnh Long</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-address-1">Description</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" name="address_1" class="form-control"></textarea>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Quản lý hình ảnh</legend>
                     <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-address-1">Hình ảnh sản phẩm</label>
+                        <label class="col-sm-2 control-label" for="input-address-1">Product Images</label>
                         <div class="col-sm-10">
-                            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
                             <div class="container center">
                                 </div>
-
-                                <form name="upload" method="post" action="#" enctype="multipart/form-data" accept-charset="utf-8">
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-3 center">
-                                            <div class="btn-container">
-                                                <!--the three icons: default, ok file (img), error file (not an img)-->
-                                                <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
-                                                <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
-                                                <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
-                                                <!--this field changes dinamically displaying the filename we are trying to upload-->
-                                                <p id="namefile">Only pics allowed! (jpg,jpeg,bmp,png)</p>
-                                                <!--our custom btn which which stays under the actual one-->
-                                                <input type="file" value="" name="fileup" id="fileup">
-                                                <button type="button" id="btnup" class="btn btn-primary btn-lg">Browse for your pic!</button>
-                                                <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
-
-                                            </div>
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 center">
+                                    <div class="btn-container">
+                                        <input type="file" value="" name="fileup" id="fileup" multiple>
                                     </div>
-                                    <!--additional fields-->
-                                </form>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     <div class="form-group required">
-                        <label class="col-sm-2 control-label" for="input-lastname">Giá Tiền</label>
+                        <label class="col-sm-2 control-label" >Start Price</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nhập vào" value="" placeholder="Giá tiền muốn bán" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" >Tình trạng sản phẩm</label>
-                        <div class="col-sm-10">
-                            <label class="radio-inline">
-                                <input type="radio" name="newsletter" value="1"> Mới 100%
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="newsletter" value="0" checked="checked"> Khác( Mô tả)
-                            </label>
+                            <input type="text" name="nhập vào" value="" class="form-control">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
-                            <input type="submit" value="Submit!" class="btn btn-primary" id="submitbtn">
-                            <button type="button" class="btn btn-default" disabled="disabled" id="fakebtn">Submit! <i class="fa fa-minus-circle"></i></button>
+
+                            <button type="button" class="btn btn-default" id="fakebtn">Submit!</button>
                         </div>
                     </div>
+
                 </fieldset>
             </form>
         </div>
@@ -750,6 +671,7 @@
     <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
 </footer>
 <!-- //end Footer Container -->
+</div>
 <!-- Include Libs & Plugins
 	============================================ -->
 <!-- Placed at the end of the document so the pages load faster -->

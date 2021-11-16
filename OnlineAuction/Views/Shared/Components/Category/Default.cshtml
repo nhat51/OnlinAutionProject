@@ -15,14 +15,17 @@
                     <div class="col-md-12 hover-menu">
                         <div class="menu">
                             <ul>
-                               
+                                @foreach (var item in category.Sub_Categories)
+                                {
                                     <li>
                                         <a href="category.html "
                                            class="main-menu">
-                                           sub category name
+                                            @item.Sub_Category_Name
                                         </a>
                                     </li>
-                                
+
+
+                                }
 
 
                             </ul>
