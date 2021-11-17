@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnlineAuction.Data;
 
 namespace OnlineAuction.Migrations
 {
     [DbContext(typeof(OnlineAuctionContext))]
-    partial class OnlineAuctionContextModelSnapshot : ModelSnapshot
+    [Migration("20211117143845_NhatMigrate10")]
+    partial class NhatMigrate10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -11,11 +11,11 @@ namespace OnlineAuction.ViewModels
     {
         public string Product_Name { get; set; }
         public string ProductDescription { get; set; }
-        public string UserName { get; set; }
+        public List<Category> Categories { get; set; }
         public DateTime EndDate { get; set; }
         public int StartPrice { get; set; }
-        public List<SubCategory> Sub_Categories { get; set; }
-        public List<Category> Categories { get; set; }
+        public SubCategory Sub_Categories { get; set; }
+        public int Duration { get; set; }
         public List<IFormFile> Product_Image { get; set; }
     }
 }

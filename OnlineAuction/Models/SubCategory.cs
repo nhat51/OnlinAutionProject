@@ -11,6 +11,6 @@ namespace OnlineAuction.Models
         public string Sub_Category_Name { get; set; }
         public int CategoryID { get; set; }
         public Category Category { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Auction> Products { get; set; }
     }
 }

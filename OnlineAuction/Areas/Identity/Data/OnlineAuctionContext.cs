@@ -16,7 +16,7 @@ namespace OnlineAuction.Data
             : base(options)
         {
         }
-        public DbSet<Product> Products { get; set; }
+        
         public DbSet<ProductImage> ProdcutImages { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }

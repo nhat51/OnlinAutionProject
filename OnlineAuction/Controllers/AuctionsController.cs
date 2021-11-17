@@ -18,11 +18,10 @@ namespace OnlineAuction.Controllers
     {
         private readonly OnlineAuctionContext _context;
         private IWebHostEnvironment webHostEnvironment;
-
-        public AuctionsController(OnlineAuctionContext context, IWebHostEnvironment webHostEnvironment)
+        public AuctionsController(OnlineAuctionContext context,IWebHostEnvironment webHostEnvironment)
         {
-            this.webHostEnvironment = webHostEnvironment;
             _context = context;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         // GET: Auctions
@@ -54,7 +53,7 @@ namespace OnlineAuction.Controllers
         // GET: Auctions/Create
         public IActionResult Create()
         {
-            ViewData["SubCategoryID"] = new SelectList(_context.SubCategories, "ID", "ID");
+            ViewData["SubCategoryName"] = new SelectList(_context.SubCategories, "ID", "Sub_Category_Name");
             return View();
         }
 
@@ -63,38 +62,40 @@ namespace OnlineAuction.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(CreateAuctionViewModel viewModel,ProductImage productImage)
+        public async Task<IActionResult> Create(CreateAuctionViewModel vm,ProductImage productImage)
         {
+            
             if (ModelState.IsValid)
             {
-                var newAuction = new Auction()
+                var auction = new Auction()
                 {
-                    ProductName = viewModel.Product_Name,
-                    StartPrice = viewModel.StartPrice,
-                    EndDate = viewModel.EndDate,
-                    Description = viewModel.ProductDescription,
+                    ProductName = vm.Product_Name,
+                    StartPrice = vm.StartPrice,
+                    Description = vm.ProductDescription,
+                    Duration = vm.Duration,
+                    EndDate = vm.EndDate.AddHours(vm.Duration),
+                    Sub_Category = vm.Sub_Categories,
                     
-
                 };
-                foreach (var item in viewModel.Product_Image)
+
+                foreach (var item in vm.Product_Image)
                 {
                     productImage.Image = UploadImage(item);
-
                 }
-                viewModel.Categories = _context.Categories.Include(s => s.Sub_Categories).ToList();
-                _context.Add(newAuction);
+                _context.Add(auction);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            /*ViewData["SubCategoryID"] = new SelectList(_context.SubCategories, "ID", "ID", auction.SubCategoryID);*/
-            return View(viewModel);
+            vm.Categories = _context.Categories.Include(s => s.Sub_Categories).ToList();
+            ViewData["SubCategory"] = new SelectList(_context.SubCategories, "Sub_Category_Name", "Sub_Category", vm.Sub_Categories);
+            return View(vm);
         }
         private string UploadImage(IFormFile item)
         {
             string fileName = null;
             if (item != null)
             {
-                string uploadDir = Path.Combine(webHostEnvironment.WebRootPath, "image/Product");
+                string uploadDir = Path.Combine(webHostEnvironment.WebRootPath, "image/Category");
                 fileName = Guid.NewGuid().ToString() + "-" + item.FileName;
                 string filePath = Path.Combine(uploadDir, fileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -127,7 +128,7 @@ namespace OnlineAuction.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,ProductName,SubCategoryID,EndDate,StartPrice,Status")] Auction auction)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,ProductName,Description,SubCategoryID,EndDate,StartPrice,Status")] Auction auction)
         {
             if (id != auction.ID)
             {

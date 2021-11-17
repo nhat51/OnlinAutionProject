@@ -17,6 +17,8 @@ namespace OnlineAuction.Models
         public ICollection<AuctionDetail> AuctionDetails { get; set; }
         public ICollection<ProductImage> Images { get; set; }
         public DateTime EndDate { get; set; }
+        public int Duration { get; set; }
+
         public int StartPrice { get; set; }
         public bool Status { get; set; }
     }

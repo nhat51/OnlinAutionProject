@@ -12,6 +12,6 @@ namespace OnlineAuction.Models
         public int ProductID { get; set; }
         public int BidPrice { get; set; }
         public Order Order { get; set; }
-        public Product Product { get; set; }
+        public Auction Auction { get; set; }
     }
 }
